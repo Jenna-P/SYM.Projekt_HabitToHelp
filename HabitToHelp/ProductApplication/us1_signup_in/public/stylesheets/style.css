@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  margin-left: 0;
+}
+
+/* Pen-specific styles */
+html,
+body,
+ul,
+li {
+  height: 100vh;
+}
+
+body {
+  color: #fff;
+  font-family: sans-serif;
+  font-size: 1.25rem;
+  line-height: 150%;
+  text-shadow: 0 2px 2px #b6701e;
+}
+
+article {
+  position: relative;
+  top: 50%;
+  text-align: center;
+  transform: translate(0, -50%);
+  padding: 1rem;
+}
+
+h1 {
+  font-size: 1.75rem;
+  margin: 0 0 0.75rem 0;
+}
+
+/* Pattern styles */
+
+ul {
+  column-count: 2;
+  column-gap: 0;
+}
+
+.left-half {
+  background: #3a72c6;
+}
+
+.right-half {
+  background: whitesmoke;
+}
+
+.alignment {
+  display: flex;
+  flex-wrap: nowrap;
+}
