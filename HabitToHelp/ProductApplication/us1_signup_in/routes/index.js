@@ -39,12 +39,8 @@ router.post("/signup", (req, res, next) => {
           password_confirm
         });
       } else {
-          res.send("registered"); //should render to login page 
-      }
-    
+          //res.send("registered"); //should render to login page 
       
-
-
     //creat new user 
     const newUser = {
         username,
@@ -53,10 +49,10 @@ router.post("/signup", (req, res, next) => {
         password,
         password_confirm
     };
-
+     console.log(newUser);
     res.status(201).send(newUser);
 
-
+}
 
 })
 

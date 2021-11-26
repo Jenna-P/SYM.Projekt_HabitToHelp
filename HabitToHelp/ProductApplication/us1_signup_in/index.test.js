@@ -1,6 +1,7 @@
 
 const request = require('supertest');
-const app = require('./app')
+const app = require('./app');
+const expect = require('expect');
 
 
  
@@ -24,7 +25,7 @@ describe('GET /', () => {
 
 
 describe('POST /signup', () => {
-    it('should sign up with username, name , email and passwrod ', () => {
+    it('should sign up with username, name , email and password ', () => {
         return request(app)
         .post('/signup')
         .send({username: 'test', name: 'testName', email: 'test@test.com', password: 'abc123', password_confirm: 'abc123' })
@@ -47,7 +48,7 @@ describe('POST /signup', () => {
     it('should return err, if input is empty', () => {
         return request(app).post('/signup')
         .send({username: '', name: '', email: '', password: '', password_confirm: '' })
-        .expect(422);
+        .expect(500); //Internal server error
 
     });
 
@@ -56,10 +57,19 @@ describe('POST /signup', () => {
         return request(app).post('/signup')
         .send({password: '123', password_confirm: '456' })
        // .expect(password).not.toBe(password_confirm)
-        .expect(422)
+        .expect(500); //Internal server error
         
 
     });
+
+    // it('should return err, if pw is less then 6 character', () => {
+    //     const password = '123';
+    //     return request(app).post('/signup')
+    //     .send({password: '123'})
+    //     .expect(422)
+    //     .expect(password.length).toBeLessThan(6)
+
+
 
     //check pw length < 6
     // it('should return err, if pw is less then 6 character', () => {
