@@ -43,7 +43,6 @@ button{
   font-size: 19px;
 }
 
-
 /* Welcomepage */
 .wrapper{
   background-color: #0C8BCE;
@@ -94,8 +93,4 @@ button{
   height: 100%;
   width: 50%;
   background: #ffffff;
-}
-
-.form-group {
-/*  padding: 10px;*/
 }
