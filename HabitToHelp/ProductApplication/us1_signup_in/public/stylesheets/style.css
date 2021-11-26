@@ -98,13 +98,17 @@ button{
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   color: #ffffff;
-  background-color: rgba(0, 0, 0, 0.5);
 }
 .right {
   height: 100%;
   width: 50%;
   background: #ffffff;
 }
-.wrapperRight .logo, .wrapperRight h1{
+.wrapperRight .logo, .wrapperRight p{
   text-align: center;
+  color: #000000;
+}
+
+label{
+  color: #000000;
 }
