@@ -1,10 +1,17 @@
+html {
+  height: 100%; 
+}
 body{
   margin: 0;
+  height: 100%;
 }
 
 h1, h2, h3, h4, h5, a.logo {
   font-family: 'Oswald', sans-serif;
   color: #000000;
+}
+p{
+  
 }
 
 /*Top menu*/
@@ -19,26 +26,28 @@ a.logo{
 }
 
 .rightTopMenu{
-  padding-top: 20px;
+  padding-top: 10px;
   float: right;
 }
 /* right topmenubar button and span*/
 span{
+  font-size: 15px;
 }
 
 button{
-  background: darkblue;
+  background: #000000;
   font-family: 'Oswald', sans-serif;
   color: #ffffff;
   border: none;
   padding: 10px 20px;
+  font-size: 19px;
 }
 
 
 /* Welcomepage */
 .wrapper{
   background-color: #0C8BCE;
-  height: 100vh;
+  height: 100%;
   position: relative;
   padding: 30px;
   padding-top: 10px;
@@ -58,6 +67,18 @@ button{
 }
 
 /* image container*/
+.wrapperLeft {
+  padding: 10%;
+  background: rgba(00,00,AA,0.5);
+  position: relative;
+  left: 50%;
+  bottom: -560px;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 .left {
   width: 50%;
   background: url('../images/indexImg.jpg') no-repeat center;
@@ -65,6 +86,8 @@ button{
   height: 100%;
   float: left;
 }
+
+
 
 /* Signin form container */
 .right {
