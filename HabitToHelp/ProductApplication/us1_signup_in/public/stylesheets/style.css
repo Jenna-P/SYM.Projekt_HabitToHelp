@@ -22,12 +22,14 @@ h1, h2, h3, h4, h5, a.logo {
   padding: 30px;
   padding-top: 10px;
   flex: 1; /*Sticky footer*/
-  margin-bottom: 80px;/*Sticky footer*/
+  margin-bottom: 60px;/*Sticky footer*/
 } 
 
 footer{
-  color: #ffffff;
-  background: red;
+  color: #b6dcf0;
+  background:#0C8BCE;
+  font-size: 10px;
+  padding-left: 30px;
 }
 footer, .push{
 
@@ -40,6 +42,7 @@ footer, .push{
 
 /*logo left*/
 a.logo{
+  color: #ffffff;
   text-decoration: none;
   font-size: 40px;
 }
@@ -51,6 +54,8 @@ a.logo{
 /* right topmenubar button and span*/
 span{
   font-size: 15px;
+  padding-right: 10px;
+  color: #ffffff;
 }
 
 button{
