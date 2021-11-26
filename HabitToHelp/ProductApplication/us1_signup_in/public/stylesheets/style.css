@@ -1,19 +1,25 @@
 body{
   margin: 0;
-  background-color: #0C8BCE;
 }
 
 /* Welcomepage */
+.wrapper{
+  background-color: #0C8BCE;
+  height: 100vh;
+  position: relative;
+}
+
 .container {
   margin: 0;
   padding: 0;
   text-align: justify;
   height: 100%;
-  background: #ffffff;
+  background: lightblue;
 }
+
+/*Site sections left/right*/
 .main {
   display: inline-block;
-  padding: 1rem 1rem;
   vertical-align: middle;
 }
 
@@ -22,24 +28,19 @@ body{
   width: 50%;
   background: url('/images/indexImg.jpg') no-repeat center;
   background-size: cover;
+  background: green;
+  height: 100%;
+  float: left;
 }
-
-.main_img {
-  border-radius: 8px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 80%;
-}
-
 
 /* Signin form container */
 .right {
   height: 100%;
-  margin-left: 5rem;
+  width: 50%;
+  /*  margin-left: 5rem;*/
+  background: red;
 }
 
-
 .form-group {
-  padding: 10px;
+/*  padding: 10px;*/
 }
