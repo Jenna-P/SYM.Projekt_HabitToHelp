@@ -1,5 +1,13 @@
+body{
+  margin: 0;
+}
+
+.wrapper{
+  background-color: #0C8BCE;
+}
+
+/* Welcomepage */
 .container {
-  border: 1px solid black;
   margin: 0;
   padding: 0;
   text-align: justify;
@@ -11,13 +19,11 @@
   vertical-align: middle;
 }
 
+/* image container*/
 .left {
   width: 50%;
-  background-color: rgb(93, 140, 226);
-}
-.right {
-  height: 100%;
-  margin-left: 5rem;
+  background: url('/images/indexImg.jpg') no-repeat center;
+  background-size: cover;
 }
 
 .main_img {
@@ -27,6 +33,14 @@
   margin-right: auto;
   width: 80%;
 }
+
+
+/* Signin form container */
+.right {
+  height: 100%;
+  margin-left: 5rem;
+}
+
 
 .form-group {
   padding: 10px;
