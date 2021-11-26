@@ -1,9 +1,7 @@
-html {
+html, body {
   height: 100%; 
-}
-body{
   margin: 0;
-  height: 100%;
+  background: #0C8BCE;
 }
 
 h1, h2, h3, h4, h5, a.logo {
@@ -12,6 +10,19 @@ h1, h2, h3, h4, h5, a.logo {
 }
 p{
   
+}
+
+.wrapper{
+  height: 100%;
+  position: relative;
+  padding: 30px;
+  padding-top: 10px;
+  min-height: 100%;
+  margin-bottom: -50px; /*Sticky footer*/
+} 
+
+footer{
+  color: #ffffff;
 }
 
 /*Top menu*/
@@ -44,13 +55,6 @@ button{
 }
 
 /* Welcomepage */
-.wrapper{
-  background-color: #0C8BCE;
-  height: 100%;
-  position: relative;
-  padding: 30px;
-  padding-top: 10px;
-} 
 
 .container {
   margin: 0;
@@ -131,12 +135,13 @@ label{
 a.forgotPassword {
   display: block;
   text-align: right;
-  width: 85%;
+  width: 340px;
   color: #0C8BCE;
   text-decoration: none;
 }
 button.submitButton{
   margin-top: 50px;
-  width: 81%;
-  margin-left: 3%;
+  width: 330px;
+  margin-left: 10px;
+  cursor: pointer;
 }
