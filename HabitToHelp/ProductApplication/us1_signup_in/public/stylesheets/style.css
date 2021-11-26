@@ -2,18 +2,47 @@ body{
   margin: 0;
 }
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, a.logo {
   font-family: 'Oswald', sans-serif;
   color: #000000;
 }
+
+/*Top menu*/
+.menu{
+  margin-bottom: 20px;;
+}
+
+/*logo left*/
+a.logo{
+  text-decoration: none;
+  font-size: 40px;
+}
+
+.rightTopMenu{
+  padding-top: 20px;
+  float: right;
+}
+/* right topmenubar button and span*/
+span{
+}
+
+button{
+  background: darkblue;
+  font-family: 'Oswald', sans-serif;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+}
+
 
 /* Welcomepage */
 .wrapper{
   background-color: #0C8BCE;
   height: 100vh;
   position: relative;
-  padding: 30px
-}
+  padding: 30px;
+  padding-top: 10px;
+} 
 
 .container {
   margin: 0;
