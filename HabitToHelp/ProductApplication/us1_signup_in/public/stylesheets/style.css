@@ -71,7 +71,7 @@ button{
   background: rgba(00,00,AA,0.5);
   position: relative;
   left: 50%;
-  bottom: -560px;
+  top: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   color: #ffffff;
@@ -88,9 +88,23 @@ button{
 
 
 
-/* Signin form container */
+/* Signin form container right */
+.wrapperRight {
+  padding: 10%;
+  background: rgba(00,00,AA,0.5);
+  position: relative;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.5);
+}
 .right {
   height: 100%;
   width: 50%;
   background: #ffffff;
+}
+.wrapperRight .logo, .wrapperRight h1{
+  text-align: center;
 }
