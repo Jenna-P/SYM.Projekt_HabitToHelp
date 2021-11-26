@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>HabitToHelp</title>
     <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
 </head>
 <body>
@@ -19,6 +19,32 @@
 
           <section> 
             <form action="/signup" method="POST">
+    <!--Google font added-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet"></head>
+<body>    
+  <div class='wrapper'>    
+    <div class="menu">
+      <a href="/" class="logo">HabitToHelp</a>
+      <div class="rightTopMenu">
+        <span>Don’t have an account?</span>
+        <button onclick="">Create account</button>
+      </div>
+    </div>
+    <div class='container'>    
+      <div class='main left'>
+        <div class="wrapperLeft">
+          <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam.</p>
+        </div>
+      </div>
+      
+    <div class='main right'>
+      <div class="wrapperRight">
+        <h1 class="logo">HabitToHelp</h1>
+        <p>Nemo enim ipsam quia non numquam eius modi tempora incidunt ut labore etiam.</p>
+        <section> 
+          <form action="/users/register" method="POST">
             <div class="form-group">
               <label for="name">Name</label>
               <input
@@ -42,7 +68,6 @@
                 value="<%= typeof username != 'undefined' ? username : '' %>"
               />
             </div>
-
 
             <div class="form-group">
               <label for="email">Email</label>
@@ -78,17 +103,13 @@
               />
             </div>
             <button type="submit" class="btn btn-primary btn-block">
-              Register
+              Register!
             </button>
           </form>
-          </section>
-        </div>
+        </section>
       </div>
-      
-      
-      
-      
-    
-    
+    </div>
+  </div>      
+</div>      
 </body>
 </html>
