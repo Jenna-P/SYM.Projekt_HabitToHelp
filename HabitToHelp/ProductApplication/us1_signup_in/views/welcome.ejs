@@ -33,6 +33,31 @@
         <section> 
           <form action="/users/register" method="POST">
             <div class="form-group">
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="form-control"
+                placeholder="Enter Email address"
+                value="<%= typeof email != 'undefined' ? email : '' %>"
+              />
+              <input
+                type="password"
+                id="password"
+                name="password"
+                class="form-control"
+                placeholder="Enter Password"
+                value="<%= typeof password != 'undefined' ? password : '' %>"
+              />
+            </div>
+            <a class="forgotPassword" href="#">Forgot password?</a>
+            <button type="submit" class="submitButton">
+              Sign in
+            </button>
+          </form>
+
+<!--          <form action="/users/register" method="POST">
+            <div class="form-group">
               <label for="name">Name</label>
               <input
                 type="name"
@@ -92,7 +117,7 @@
             <button type="submit" class="btn btn-primary btn-block">
               Register
             </button>
-          </form>
+          </form>-->
         </section>
       </div>
     </div>
