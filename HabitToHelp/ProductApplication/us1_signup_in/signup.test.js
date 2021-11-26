@@ -12,7 +12,7 @@ const expect = require('expect');
 
 // get /(index)  (test to working jest)
 describe('GET /', () => {
-    it('should responde to index', (done) => {
+    it('should responde to signup', (done) => {
         request(app)
       .get('/')
       .send('Signup for an account')
