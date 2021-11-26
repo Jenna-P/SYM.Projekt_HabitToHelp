@@ -4,12 +4,16 @@ html, body {
   background: #0C8BCE;
 }
 
+/*sticky footer*/
+body{
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
 h1, h2, h3, h4, h5, a.logo {
   font-family: 'Oswald', sans-serif;
   color: #000000;
-}
-p{
-  
 }
 
 .wrapper{
@@ -17,12 +21,16 @@ p{
   position: relative;
   padding: 30px;
   padding-top: 10px;
-  min-height: 100%;
-  margin-bottom: -50px; /*Sticky footer*/
+  flex: 1; /*Sticky footer*/
+  margin-bottom: 80px;/*Sticky footer*/
 } 
 
 footer{
   color: #ffffff;
+  background: red;
+}
+footer, .push{
+
 }
 
 /*Top menu*/
