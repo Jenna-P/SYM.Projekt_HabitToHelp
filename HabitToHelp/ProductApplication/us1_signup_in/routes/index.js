@@ -17,17 +17,31 @@ router.get("/",  (req, res) => res.render('welcome'));
 
 router.post("/signup", (req, res, next) => {
     const {username, name, email, password, password_confirm} = req.body;
-
-    if (!name || !email || !password || !password_confirm) {
-        return next(creatErrors(422, 'Validation Error'));
+    let errors = [];
+     //check requires fields
+     if (!name || !email || !password || !password_confirm) {
+        errors.push({ msg: 'Please enter all fields' });
       }
+    //check pw match
       if (password != password_confirm) {
-        return next(creatErrors(422, 'Validation Error'));
+        errors.push({ msg: 'Passwords do not match' });
       }
-      //check pw length
+    //check pw length
       if (password.length < 6) {
-        return next(creatErrors(422, 'Validation Error'));
-    }
+        errors.push({ msg: 'Password must be at least 6 characters' });
+      }
+      if (errors.length > 0) { //that means vi have issues
+        res.render('register', {  //rerender register form
+          errors,
+          name,
+          email,
+          password,
+          password_confirm
+        });
+      } else {
+          res.send("registered"); //should render to login page 
+      }
+    
       
 
 
