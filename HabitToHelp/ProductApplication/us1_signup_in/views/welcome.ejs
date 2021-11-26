@@ -9,49 +9,80 @@
 </head>
 <body>
     
-    <div class="alignment">
-
-        <li class="left-half">
-          <article>
-           <img class="main_img" src="/images/indexImg.jpg" alt="">
+  <div class='container'>
     
-          </article>
-        </li>
-    
+     <div class='main left'>
+       <img class="main_img" src="/images/indexImg.jpg" alt="">
+     </div>
+     
+      <div class='main right'>
 
-        <li class="right-half">
-          <section>
-            <form action="action_page.php" style="border:1px solid #ccc">
-                <div class="container">
-                  <h1>Sign Up</h1>
-                  <p>Please fill in this form to create an account.</p>
-                  <hr>
-              
-                  <label for="email"><b>Email</b></label>
-                  <input type="text" placeholder="Enter Email" name="email" required>
-              
-                  <label for="psw"><b>Password</b></label>
-                  <input type="password" placeholder="Enter Password" name="psw" required>
-              
-                  <label for="psw-repeat"><b>Repeat Password</b></label>
-                  <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
-              
-                  <label>
-                    <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
-                  </label>
-              
-                  <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
-              
-                  <div class="clearfix">
-                    <button type="button" class="cancelbtn">Cancel</button>
-                    <button type="submit" class="signupbtn">Sign Up</button>
-                  </div>
-                </div>
-              </form>
-              
-            
+          <section> 
+            <form action="/users/register" method="POST">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input
+                type="name"
+                id="name"
+                name="name"
+                class="form-control"
+                placeholder="Enter Name"
+                value="<%= typeof name != 'undefined' ? name : '' %>"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="username">Username</label>
+              <input
+                type="username"
+                id="username"
+                name="username"
+                class="form-control"
+                placeholder="Enter UserName"
+                value="<%= typeof username != 'undefined' ? username : '' %>"
+              />
+            </div>
+
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="form-control"
+                placeholder="Enter Email"
+                value="<%= typeof email != 'undefined' ? email : '' %>"
+              />
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                class="form-control"
+                placeholder="Create Password"
+                value="<%= typeof password != 'undefined' ? password : '' %>"
+              />
+            </div>
+            <div class="form-group">
+              <label for="password2">Confirm Password</label>
+              <input
+                type="password"
+                id="password2"
+                name="password2"
+                class="form-control"
+                placeholder="Confirm Password"
+                value="<%= typeof password2 != 'undefined' ? password2 : '' %>"
+              />
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">
+              Register
+            </button>
+          </form>
           </section>
-        </li>
+        </div>
       </div>
       
       

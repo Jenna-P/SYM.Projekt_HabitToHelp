@@ -1,53 +1,33 @@
-* {
+.container {
+  border: 1px solid black;
   margin: 0;
-  margin-left: 0;
+  padding: 0;
+  text-align: justify;
+  height: 100%;
+}
+.main {
+  display: inline-block;
+  padding: 1rem 1rem;
+  vertical-align: middle;
 }
 
-/* Pen-specific styles */
-html,
-body,
-ul,
-li {
-  height: 100vh;
+.left {
+  width: 50%;
+  background-color: rgb(93, 140, 226);
+}
+.right {
+  height: 100%;
+  margin-left: 5rem;
 }
 
-body {
-  color: #fff;
-  font-family: sans-serif;
-  font-size: 1.25rem;
-  line-height: 150%;
-  text-shadow: 0 2px 2px #b6701e;
+.main_img {
+  border-radius: 8px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
 }
 
-article {
-  position: relative;
-  top: 50%;
-  text-align: center;
-  transform: translate(0, -50%);
-  padding: 1rem;
-}
-
-h1 {
-  font-size: 1.75rem;
-  margin: 0 0 0.75rem 0;
-}
-
-/* Pattern styles */
-
-ul {
-  column-count: 2;
-  column-gap: 0;
-}
-
-.left-half {
-  background: #3a72c6;
-}
-
-.right-half {
-  background: whitesmoke;
-}
-
-.alignment {
-  display: flex;
-  flex-wrap: nowrap;
+.form-group {
+  padding: 10px;
 }
