@@ -13,15 +13,20 @@ describe('GET /', () => {
 });
 
 /*TESTCASE 2:*/
-describe('GET /', () => {
-    it('Should respond with dashboard when sign-in success', (done) => {
-
-    });
-});
-
-describe('GET /', () => {
-    it('', (done) => {
-
-    });
+describe('POST /dashboard', () => {
+    it('Should respond with dashboard when sign-in success', function() {
+        return request(app)
+        .post('/dashboard')
+        .send({username: 'test', password: 'abc123'})
+        .expect(201)
+        .then((res) => {
+            expect(res.body).toEqual(
+              expect.objectContaining({
+                  username: expect.any(String),
+                  password: expect.anything()
+                })
+            );
+        })
+    })
 });
 
