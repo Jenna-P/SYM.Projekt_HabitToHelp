@@ -20,10 +20,10 @@ describe('POST /signup', () => {
                   name: expect.any(String),
                   email: expect.any(String),
                   password: expect.anything(),
-          })
-        );
-    });
-})
+            })
+            );
+        });
+    })
   
     //check empty input
     it('should return err, if input is empty', () => {
@@ -49,16 +49,3 @@ describe('POST /signup', () => {
         .expect('err');
     });
 });
-
-
-
-
-
-        
-    
-
-
-
-
-
-
