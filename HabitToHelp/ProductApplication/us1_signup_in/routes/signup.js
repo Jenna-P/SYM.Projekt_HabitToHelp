@@ -3,8 +3,6 @@ const express = require('express');
 const router = express.Router();
 //const { ensureAuthenticated, forwardAuthenticated } = require('../config/auth');
 
-const app = express();
-
 //GET routes sign up page
 router.get("/",  (req, res) => res.render('sign-up'));
 
@@ -52,8 +50,8 @@ router.post("/", (req, res, next) => {
         
     };
      console.log(newUser);
-    res.status(201).send(newUser); //should render to welcome/login page with success msg
-    
+    //res.status(201).send(newUser); //should render to welcome/login page with success msg
+    res.status(201).render('welcome');
 
 }
 
