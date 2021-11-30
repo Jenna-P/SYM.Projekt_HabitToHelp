@@ -1,7 +1,9 @@
 
+
 const request = require('supertest');
+ 
 const app = require('./app');
-const expect = require('expect');
+//const expect = require('expect');
 
 
  
@@ -48,58 +50,41 @@ describe('POST /signup', () => {
     it('should return err, if input is empty', () => {
         return request(app).post('/signup')
         .send({username: '', name: '', email: '', password: '', password_confirm: '' })
-        .expect(500); //Internal server error
+        .expect('err'); //Internal server error
 
     });
 
     //check password and pw_confirm match
     it('should return err, if pw and pw_confirm does not match', () => {
+       
         return request(app).post('/signup')
         .send({password: '123', password_confirm: '456' })
        // .expect(password).not.toBe(password_confirm)
-        .expect(500); //Internal server error
+        .expect('err'); 
         
 
     });
 
-    // it('should return err, if pw is less then 6 character', () => {
-    //     const password = '123';
-    //     return request(app).post('/signup')
-    //     .send({password: '123'})
-    //     .expect(422)
-    //     .expect(password.length).toBeLessThan(6)
+    it('should return err, if pw is less then 6 character', () => {
+        const password = '123';
+        expect(password.length).toBeLessThan(6)
+        return request(app).post('/signup')
+        //.expect(password.length).toBeLessThan(6)
+        .send(password)
+        .expect('err');
+    });
+
+})
 
 
 
-    //check pw length < 6
-    // it('should return err, if pw is less then 6 character', () => {
-    //     const password = '123';
-    //     return request(app).post('/signup')
-    //     .send({password: '123'})
-        // .expect(422)
-        
-    //     .then((res) => {
-        // .expect(password.length).toBeLessThan(6)
+
+
         
     
-     //.expect(password).toHaveLength(3)         
-          
-      
-    // });
-    //     .then(() => {
-    //         expect(password.length).toEqual(
-    //         expect.objectContaining({
-                
-    //             password: expect.toBeLessThan(6),
-    //     })
-    //     );
-    
-    // });
 
 
 
 
 
-
-});
 
