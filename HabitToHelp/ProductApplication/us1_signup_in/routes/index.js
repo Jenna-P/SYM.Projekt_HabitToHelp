@@ -14,8 +14,7 @@ router.post("/",  (req, res) => {
         password        
     };
     console.log(newSignIn);
-//  res.status(201).send(newSignIn); //should render to welcome/login page with success msg
-    res.status(201).render('signUpSuccess');
+    res.status(201).render('dashboard'); //success scenario. 
 });
 
 module.exports = router;
