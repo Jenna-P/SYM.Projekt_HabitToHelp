@@ -50,9 +50,8 @@ router.post("/", (req, res, next) => {
         
     };
      console.log(newUser);
-    //res.status(201).send(newUser); //should render to welcome/login page with success msg
-    res.status(201).render('welcome');
-
+    res.status(201).send(newUser); //should render to welcome/login page with success msg
+    //res.status(201).render('index');
 }
 
 })
