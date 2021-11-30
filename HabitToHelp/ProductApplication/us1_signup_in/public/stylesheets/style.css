@@ -44,9 +44,6 @@ footer {
   font-size: 10px;
   padding-left: 30px;
 }
-footer,
-.push {
-}
 
 /*Top menu*/
 .menu {
@@ -54,7 +51,6 @@ footer,
 }
 
 /*logo left*/
-a.logo {
   a.logo {
     color: #ffffff;
     text-decoration: none;
@@ -184,7 +180,3 @@ a.logo {
     width: 81%;
     margin-left: 3%;
   }
-  width: 330px;
-  margin-left: 10px;
-  cursor: pointer;
-}
