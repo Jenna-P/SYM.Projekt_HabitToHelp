@@ -8,9 +8,9 @@ router.get("/",  (req, res) => res.render('index'));
 
 //POST success redirect to dashboard or fallback to index
 router.post("/dashboard",  (req, res) => {
-    const {username, password} = req.body;
+    const {email, password} = req.body;
     const newSignIn = {
-        username,
+        email,
         password        
     };
     console.log(newSignIn);
