@@ -21,7 +21,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/signUpSuccess', indexRouter);
+app.use('/signUpSuccess', signUpRouter);
 app.use('/dashboard', indexRouter);
 app.use('/users', usersRouter);
 app.use('/signup', signUpRouter);
