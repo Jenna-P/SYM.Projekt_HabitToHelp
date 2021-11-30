@@ -6,17 +6,6 @@ const app = require('../app');
 // empty input, not match pw with pw-con, 
 //pw length 
 
-// get /(index)  (test to working jest)
-describe('GET /', () => {
-    it('should responde to signup', (done) => {
-        request(app)
-      .get('/')
-      .send('Signup for an account')
-      .expect(200, done)
- 
-    })
-})
-
 // POST /signup 
 describe('POST /signup', () => {
     it('should sign up with username, name , email and password ', () => {
