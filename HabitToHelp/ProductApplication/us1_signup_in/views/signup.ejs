@@ -16,14 +16,14 @@
     <div class="menu">
       <a href="/" class="logo">HabitToHelp</a>
       <div class="rightTopMenu">
-        <span>Don’t have an account?</span>
-          <form action="/signup" id="createAccountButton" method="GET">
-            <button id="createAccountButton">Create account</button>
+        <span>Already have an account?</span>
+          <form action="/" id="createAccountButton" method="GET">
+            <button id="createAccountButton">Sign in</button>
           </form>
       </div>
     </div>
     <div class='container'>    
-      <div class='main left'>
+      <div class='main left' id="signup">
         <div class="wrapperLeft">
           <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam.</p>
         </div>
@@ -35,8 +35,7 @@
         <p>Please sign up for start track your habits.</p>
         <section> 
           <form action="/signUpSuccess" method="POST">
-            <div class="form-group">
-              <label for="name">Name</label>
+            <div class="form-group" id="signup">
               <input
                 type="name"
                 id="name"
@@ -45,10 +44,6 @@
                 placeholder="Enter Name"
                 value="<%= typeof name != 'undefined' ? name : '' %>"
               />
-            </div>
-    
-            <div class="form-group">
-              <label for="username">Username</label>
               <input
                 type="username"
                 id="username"
@@ -57,10 +52,6 @@
                 placeholder="Enter UserName"
                 value="<%= typeof username != 'undefined' ? username : '' %>"
               />
-            </div>
-    
-            <div class="form-group">
-              <label for="email">Email</label>
               <input
                 type="email"
                 id="email"
@@ -69,9 +60,6 @@
                 placeholder="Enter Email"
                 value="<%= typeof email != 'undefined' ? email : '' %>"
               />
-            </div>
-            <div class="form-group">
-              <label for="password">Password</label>
               <input
                 type="password"
                 id="password"
@@ -80,9 +68,6 @@
                 placeholder="Create Password"
                 value="<%= typeof password != 'undefined' ? password : '' %>"
               />
-            </div>
-            <div class="form-group">
-              <label for="password_confirm">Confirm Password</label>
               <input
                 type="password"
                 id="password_confirm"
@@ -91,8 +76,8 @@
                 placeholder="Confirm Password"
                 value="<%= typeof password_confirm != 'undefined' ? password_confirm : '' %>"
               />
-            </div>
-            <button type="submit" class="btn btn-primary btn-block">
+            <div>
+            <button type="submit" id="signup">
               Register!
             </button>
           </form>

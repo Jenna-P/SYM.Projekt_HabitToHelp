@@ -124,6 +124,15 @@ footer {
     float: left;
   }
 
+  .left#signup{
+    background: url("../images/signUpImg.jpg") no-repeat center;
+    background-size: cover;
+  }
+
+  .form-group#signup{
+    margin-top: 20px;
+  }
+
   /* Signin form container right */
   .wrapperRight {
     padding: 10%;
@@ -149,12 +158,13 @@ footer {
   label {
     color: #000000;
   }
+  
   /*Login form*/
   section form {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 250px;
+/*    height: 250px;*/
     flex-wrap: wrap;
     flex-direction: column;
   }
@@ -180,7 +190,14 @@ footer {
     text-decoration: none;
   }
   button.submitButton {
-    margin-top: 50px;
+    margin-top: 40px;
     width: 81%;
     margin-left: 3%;
+    max-width: 100px;
+  }
+  button#signup {
+    margin-top: 40px;
+    width: 24%;
+    margin-left: 40%;
+    max-width: 100px;
   }

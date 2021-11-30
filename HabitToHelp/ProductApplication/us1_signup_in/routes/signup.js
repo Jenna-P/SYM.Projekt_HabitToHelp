@@ -4,7 +4,7 @@ const router = express.Router();
 //const { ensureAuthenticated, forwardAuthenticated } = require('../config/auth');
 
 //GET routes sign up page
-router.get("/",  (req, res) => res.render('sign-up'));
+router.get("/",  (req, res) => res.render('signup'));
 
 router.post("/", (req, res, next) => {
     const {username, name, email, password, password_confirm} = req.body;
