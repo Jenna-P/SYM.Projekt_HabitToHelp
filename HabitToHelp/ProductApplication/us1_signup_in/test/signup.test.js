@@ -13,32 +13,30 @@ describe('POST /signup', () => {
         return request(app)
         .post('/signup')
         .send(testUser)
-        .expect(201)
-        
-        });
+        .expect(201)     
+    });
 
   
     //check empty input
     it('should return err, if input is empty', () => {
+        const testUser = {username: null, name: null, email: '', password: '', password_confirm: '' };
+        expect(testUser.username).toBeNull();
         return request(app).post('/signup')
-        .send({username: '', name: '', email: '', password: '', password_confirm: '' })
-        .expect('err'); //Internal server error
+        .send(testUser)       
     });
 
     //check password and pw_confirm match
     it('should return err, if pw and pw_confirm does not match', () => {
+        const testUser = {password: '123', password_confirm: '456' };
+        expect(testUser.password).not.toBe(testUser.password_confirm);
         return request(app).post('/signup')
-        .send({password: '123', password_confirm: '456' })
-       // .expect(password).not.toBe(password_confirm)
-        .expect('err'); 
+        .send(testUser)  
     });
 
     it('should return err, if pw is less then 6 character', () => {
-        const password = '123';
-        expect(password.length).toBeLessThan(6)
+        const testUser = {password: '123'};
+        expect(testUser.password.length).toBeLessThan(6)
         return request(app).post('/signup')
-        //.expect(password.length).toBeLessThan(6)
-        .send(password)
-        .expect('err');
+        .send(testUser)      
     });
 });

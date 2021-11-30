@@ -12,7 +12,7 @@ router.post("/", (req, res, next) => {
      //check requires fields
      if (!name || !email || !password || !password_confirm) {
         errors.push({ msg: 'Please enter all fields' });
-        res.send('err');  //just to check that is working
+        //res.send('err');  //just to check that is working
       }
     //check pw match
       if (password != password_confirm) {
