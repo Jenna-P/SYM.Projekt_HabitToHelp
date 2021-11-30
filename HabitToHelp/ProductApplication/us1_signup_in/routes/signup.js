@@ -15,6 +15,7 @@ router.post("/signUpSuccess", (req, res, next) => {
      //check requires fields
      if (!name || !email || !password || !password_confirm) {
         errors.push({ msg: 'Please enter all fields' });
+        
         //res.send('err');  //just to check that is working
       }
     //check pw match
@@ -28,7 +29,7 @@ router.post("/signUpSuccess", (req, res, next) => {
        
       }
       if (errors.length > 0) { //that means vi have issues
-        res.render('sign-up', {  //rerender signup form again with err msg ({ejs})
+        res.render('signup', {  //rerender signup form again with err msg ({ejs})
           errors,
           name,
           username,
