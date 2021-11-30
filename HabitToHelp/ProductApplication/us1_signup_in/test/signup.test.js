@@ -9,21 +9,14 @@ const app = require('../app');
 // POST /signup 
 describe('POST /signup', () => {
     it('should sign up with username, name , email and password ', () => {
+        const testUser = {username: 'test', name: 'testName', email: 'test@test.com', password: 'abc123', password_confirm: 'abc123' };
         return request(app)
         .post('/signup')
-        .send({username: 'test', name: 'testName', email: 'test@test.com', password: 'abc123', password_confirm: 'abc123' })
+        .send(testUser)
         .expect(201)
-        .then((res) => {
-            expect(res.body).toEqual(
-              expect.objectContaining({
-                  username: expect.any(String),
-                  name: expect.any(String),
-                  email: expect.any(String),
-                  password: expect.anything(),
-            })
-            );
+        
         });
-    })
+
   
     //check empty input
     it('should return err, if input is empty', () => {
