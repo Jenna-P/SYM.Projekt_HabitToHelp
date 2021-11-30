@@ -1,4 +1,8 @@
-module.exports = assignHabitName, checkHabitType, setHabitTypeGood, setHabitTypeBad, habit;
+module.exports = assignHabitName, checkHabitType, setHabitTypeGood, setHabitTypeBad, takeDataHabit;
+
+const testObjekter = require('./testObjekter');
+
+//import habitData from './testObjekter.js';
 
 function assignHabitName() {
     const habitName = "Drik vand";
@@ -35,7 +39,11 @@ function setHabitTypeBad(habitType_2) {
     }
 }
 
-var habit = {
+function takeDataHabit() {
+    
+}
+
+/*var habit = {
     "habit" : [{
         "name" : "Drik vand",
         "good" : true
@@ -52,11 +60,9 @@ var habit = {
         "name" : "Gå i træningscenter",
         "good" : true
     }]
-};
+};*/
 
-function getHabit() {
-    console.log(habit);
-}
+
 
 
 

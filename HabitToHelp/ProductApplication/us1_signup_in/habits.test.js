@@ -1,5 +1,5 @@
 const { expect, it } = require('@jest/globals');
-const expectExport = require('expect');
+//const expectExport = require('expect');
 //const { exists } = require('fs');
 const request = require('supertest');
 //const { describe } = require('yargs');
@@ -7,7 +7,8 @@ const assignHabitName = require('./habits');
 const habitType = require('./habits');
 const setHabitTypeGood = require('./habits');
 const setHabitTypeBad = require('./habits');
-const habitJSON = require('./habits');
+const testObjekter = require('./testObjekter');
+const takeDataHabit = require('./habits');
 
 describe('habits', () => {
     //US 1.1
@@ -32,13 +33,13 @@ describe('habits', () => {
     //US 1
     //If need to show a list
     it('should contain at least one item', () => {
-        expect(habitJSON).not.toBeNull();
+        expect(testObjekter.habit).not.toBeNull();
     });
     it('should contain a name', () => {
-        expect(getHabit().name).not.toBeNull();
+        expect(takeDataHabit.name).not.toBeNull();
     });
     it('should contain good', () => {
-        expect(getHabit().type).not.toBeNull();
+        expect(takeDataHabit.good).not.toBeNull();
     });
 
 
