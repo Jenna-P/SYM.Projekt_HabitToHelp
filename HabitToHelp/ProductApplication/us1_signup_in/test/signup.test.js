@@ -7,12 +7,12 @@ const app = require('../app');
 //pw length 
 
 // POST /signup 
-describe('POST /signup', () => {
+describe('POST /signup/signUpSuccess', () => {
     it('should sign up with username, name , email and password ', () => {
         const testUser = {username: 'test', name: 'testName', email: 'test@test.com', password: 'abc123', password_confirm: 'abc123' };
         expect(testUser).toBeDefined();
         return request(app)
-        .post('/signup')
+        .post('/signup/signUpSuccess')
         .send(testUser)
         .expect(201)     
     });

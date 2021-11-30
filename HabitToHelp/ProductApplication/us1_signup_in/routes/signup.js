@@ -6,7 +6,10 @@ const router = express.Router();
 //GET routes sign up page
 router.get("/",  (req, res) => res.render('signup'));
 
-router.post("/", (req, res, next) => {
+//GET routes sign up success page
+router.get("/signUpSuccess",  (req, res) => res.render('signUpSuccess'));
+
+router.post("/signUpSuccess", (req, res, next) => {
     const {username, name, email, password, password_confirm} = req.body;
     let errors = [];
      //check requires fields
@@ -46,8 +49,8 @@ router.post("/", (req, res, next) => {
             
         };
         console.log(newUser);
-        res.status(201).send(newUser); //should render to welcome/login page with success msg
-        //res.status(201).render('index');
+        //res.status(201).send(newUser); //should render to welcome/login page with success msg
+        res.status(201).render('signUpSuccess');
       }
 })
 
