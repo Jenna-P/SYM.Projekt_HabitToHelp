@@ -20,6 +20,7 @@ describe('POST /dashboard', () => {
         .send({username: 'test', password: 'abc123'})
         .expect(201)
         .then((res) => {
+            //TODO get ejs instead of object 
             expect(res.body).toEqual(
               expect.objectContaining({
                   username: expect.any(String),
