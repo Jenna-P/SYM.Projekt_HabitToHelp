@@ -68,6 +68,10 @@ footer {
     color: #ffffff;
   }
 
+  form#createAccountButton{
+    display: inline-block;
+  }
+
   button {
     background: #000000;
     font-family: "Oswald", sans-serif;
