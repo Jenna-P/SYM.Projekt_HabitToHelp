@@ -10,6 +10,7 @@ const app = require('../app');
 describe('POST /signup', () => {
     it('should sign up with username, name , email and password ', () => {
         const testUser = {username: 'test', name: 'testName', email: 'test@test.com', password: 'abc123', password_confirm: 'abc123' };
+        expect(testUser).toBeDefined();
         return request(app)
         .post('/signup')
         .send(testUser)
