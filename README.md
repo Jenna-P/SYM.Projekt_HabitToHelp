@@ -15,4 +15,8 @@ Tidsestimering: Se folder "MakeItUp" -> "TimeEstimation" for planning_poker_tabl
 Problemformulering + user stories + priritering heraf: 
 https://docs.google.com/document/d/1j3JPrG-ru-f0qzb9x7F8JGFQqCFVFT8IDJpS-qZB40o/edit#
 
+User stories (excel ark med prioriteter):
+
+
+
 Tidsestimering: Se folder "HabitToHelp" for planning_poker_table.ods. 
