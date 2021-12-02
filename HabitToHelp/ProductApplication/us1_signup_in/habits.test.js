@@ -44,6 +44,21 @@ describe('habits', () => {
     });
 
     
+   //US 1.2 - Redigere en vane
+   it('habit should exist', () => {
+    expect(habits.pressToDelete.habit).not.toBeNull();
+});
+
+    it('habit should be edited', () => {
+        let newName = "spise vitaminer";
+        let newGood = false;
+        let test = habits.editHabit();
+        expect(test[0]).toBe(newName);
+        expect(test[1]).toBe(newGood);
+        
+    });
+
+
 })
 
 

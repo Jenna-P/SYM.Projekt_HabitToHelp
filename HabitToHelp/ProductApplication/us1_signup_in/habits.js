@@ -51,7 +51,22 @@ function pressToDelete() {
     return Boolean(habit);
 }
 
-module.exports = {assignHabitName, checkHabitType, setHabitTypeGood, setHabitTypeBad, takeDataHabit, pressToDelete};
+function editHabit() {
+    let habitName = testObjekter.habit[0].name;
+    let habitType = testObjekter.habit[0].good;
+
+    var newName = "spise vitaminer";
+    var newGood = false;
+
+    habitName = newName;
+    habitType = newGood;
+
+    return [newName, newGood];
+}
+
+
+
+module.exports = {assignHabitName, checkHabitType, setHabitTypeGood, setHabitTypeBad, takeDataHabit, pressToDelete, editHabit};
 
 /*var habit = {
     "habit" : [{
