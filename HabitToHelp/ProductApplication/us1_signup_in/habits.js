@@ -33,6 +33,7 @@ function setHabitTypeBad(habitType_2) {
     if(habitType_2 == true) {
         habitType_2 = false;
         return habitType_2;
+        
     }
     else {
         console.log("Error: HabitType is not defined");
