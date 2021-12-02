@@ -200,3 +200,59 @@ footer {
     margin-left: 40%;
     max-width: 100px;
   }
+
+
+  /* DASHBOARD */
+  .dashboardMenu.Left {
+      display: inline-block;
+  }
+
+    .username p, .levelContainer p, .XPContainer p, .XPContainer #progressBar {
+      margin: 0px;
+      color: #ffffff;
+      text-align: right;
+      margin-bottom: 2px;
+      font-size: 13px;
+    }
+    .levelContainer p span {
+      padding-right: 0;
+    }
+
+    progress#progressBar {
+      float: left;
+      border-radius: 7px;
+      width: 70px;
+      height: 10px;
+      box-shadow: none;
+      margin-top: 2px !important;
+    }
+      progress::-webkit-progress-bar {
+        background-color: #ffffff;
+        border-radius: 0;
+      }
+      progress::-webkit-progress-value {
+        background-color: #000000;
+        border-radius: 0;
+        box-shadow: none;
+      }
+
+
+    .XPContainer p {
+      float: right;
+      padding-left: 10px;
+    }
+
+  .dashboardMenu.Right {
+      float: right;
+      margin-left: 10px;
+  }
+    .dashboardMenu.Right a img {
+      height: 50px;
+      display: inline-block;
+    }
+
+  /*Main content #dashboard*/
+    #dashboard .container{
+      background: #ffffff;
+      padding: 20px;
+    }
