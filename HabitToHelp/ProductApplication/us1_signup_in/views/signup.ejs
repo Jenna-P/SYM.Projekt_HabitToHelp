@@ -10,6 +10,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet"></head>        
+    <!--Script js-->
+    <script type="text/javascript" src="/javascript/customStyleFunctions.js"></script>
+
 </head>
 <body>
   <div class='wrapper'>    
@@ -44,6 +47,7 @@
                 class="form-control"
                 placeholder="Enter Name"
                 value="<%= typeof name != 'undefined' ? name : '' %>"
+                required
               />
               <input
                 type="username"
@@ -52,6 +56,7 @@
                 class="form-control"
                 placeholder="Enter UserName"
                 value="<%= typeof username != 'undefined' ? username : '' %>"
+                required
               />
               <input
                 type="email"
@@ -60,6 +65,7 @@
                 class="form-control"
                 placeholder="Enter Email"
                 value="<%= typeof email != 'undefined' ? email : '' %>"
+                required
               />
               <input
                 type="password"
@@ -68,14 +74,16 @@
                 class="form-control"
                 placeholder="Create Password"
                 value="<%= typeof password != 'undefined' ? password : '' %>"
+                required
               />
               <input
                 type="password"
                 id="password_confirm"
                 name="password_confirm"
-                class="form-control"
+                class="form-control" 
                 placeholder="Confirm Password"
                 value="<%= typeof password_confirm != 'undefined' ? password_confirm : '' %>"
+                required
               />
             <div>
             <button type="submit" id="signup">
