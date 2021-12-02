@@ -44,7 +44,7 @@ describe('habits', () => {
     });
 
     
-   //US 1.2 - Redigere en vane
+   //US 1.2 og 1.2.1 - Redigere en vane (både navn og type)
    it('habit should exist', () => {
     expect(habits.pressToDelete.habit).not.toBeNull();
 });
@@ -57,6 +57,8 @@ describe('habits', () => {
         expect(test[1]).toBe(newGood);
         
     });
+
+
 
 
 })
