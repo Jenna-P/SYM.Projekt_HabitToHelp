@@ -15,12 +15,7 @@
   <div class='wrapper'>    
     <div class="menu">
       <a href="/" class="logo">HabitToHelp</a>
-      <div class="rightTopMenu">
-        <span>Don’t have an account?</span>
-          <form action="/signup" id="createAccountButton" method="GET">
-            <button id="createAccountButton">Create account</button>
-          </form>
-      </div>
+
     </div>
     <div class='container'>    
       <div class='main left'>
@@ -56,75 +51,11 @@
             <a class="forgotPassword" href="#">Forgot password?</a>
             <button type="submit" class="btn btn-primary btn-block submitButton">Sign in</button>
           </form>
-
-<!--        Sign up form this goes on another page 
-             <form action="/users/register" method="POST">
-            <div class="form-group">
-              <label for="name">Name</label>
-              <input
-                type="name"
-                id="name"
-                name="name"
-                class="form-control"
-                placeholder="Enter Name"
-                value="<%= typeof name != 'undefined' ? name : '' %>"
-              />
-            </div>
-
-            <div class="form-group">
-              <label for="username">Username</label>
-              <input
-                type="username"
-                id="username"
-                name="username"
-                class="form-control"
-                placeholder="Enter UserName"
-                value="<%= typeof username != 'undefined' ? username : '' %>"
-              />
-            </div>
-
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                class="form-control"
-                placeholder="Enter Email"
-                value="<%= typeof email != 'undefined' ? email : '' %>"
-              />
-            </div>
-            <div class="form-group">
-              <label for="password">Password</label>
-              <input
-                type="password"
-                id="password"
-                name="password"
-                class="form-control"
-                placeholder="Create Password"
-                value="<%= typeof password != 'undefined' ? password : '' %>"
-              />
-            </div>
-            <div class="form-group">
-              <label for="password_confirm">Confirm Password</label>
-              <input
-                type="password"
-                id="password_confirm"
-                name="password_confirm"
-                class="form-control"
-                placeholder="Confirm Password"
-                value="<%= typeof password_confirm != 'undefined' ? password_confirm : '' %>"
-              />
-            </div>
-            <button type="submit" class="btn btn-primary btn-block">
-              Register!
-            </button>
-          </form>-->
         </section>
       </div>
     </div>
   </div>   
 </div>      
-<footer><p>&copy; HabitToHelp</p></footer>
+<%- include("globalElements/footer") %>
 </body>
 </html>
