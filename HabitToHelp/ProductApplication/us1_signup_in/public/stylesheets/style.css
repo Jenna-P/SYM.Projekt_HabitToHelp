@@ -256,3 +256,9 @@ footer {
       background: #ffffff;
       padding: 20px;
     }
+    #dashboard .wrapper{
+      margin-bottom: 100px;
+    }
+    #dashboard h1{
+      margin: 0;
+    }
