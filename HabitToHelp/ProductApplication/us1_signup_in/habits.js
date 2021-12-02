@@ -1,4 +1,3 @@
-module.exports = assignHabitName, checkHabitType, setHabitTypeGood, setHabitTypeBad, takeDataHabit;
 
 const testObjekter = require('./testObjekter');
 
@@ -33,7 +32,7 @@ function setHabitTypeBad(habitType_2) {
     if(habitType_2 == true) {
         habitType_2 = false;
         return habitType_2;
-        
+
     }
     else {
         console.log("Error: HabitType is not defined");
@@ -41,8 +40,17 @@ function setHabitTypeBad(habitType_2) {
 }
 
 function takeDataHabit() {
-    
+    const test = 
+    testObjekter.habit[0].name ;
+    return test;
+
+
 }
+
+
+
+
+module.exports = {assignHabitName, checkHabitType, setHabitTypeGood, setHabitTypeBad, takeDataHabit};
 
 /*var habit = {
     "habit" : [{

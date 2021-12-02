@@ -3,32 +3,30 @@ const { expect, it } = require('@jest/globals');
 //const { exists } = require('fs');
 const request = require('supertest');
 //const { describe } = require('yargs');
-const assignHabitName = require('./habits');
-const habitType = require('./habits');
-const setHabitTypeGood = require('./habits');
-const setHabitTypeBad = require('./habits');
+
 const testObjekter = require('./testObjekter');
-const takeDataHabit = require('./habits');
+
+const habits = require('./habits');
 
 describe('habits', () => {
     //US 1.1
     it('should have a name', () => {
-        expect(assignHabitName).not.toBeNull();
+        expect(habits.assignHabitName()).not.toBeNull();
     });
     it('habit should not be empty', () => {
-        expect(habitType).not.toBeNull();
+        expect(habits.habitType).not.toBeNull();
     });
     //US 1.1.1
     it('habit should not be empty', () => {
-        expect(habitType).not.toBeNull();
+        expect(habits.habitType).not.toBeNull();
     });
     it('should be true if good', () => {
         const testVarHabOb = false;
-        expect(setHabitTypeGood(testVarHabOb)).toBeTruthy;
+        expect(habits.setHabitTypeGood(testVarHabOb)).toBeTruthy;
     });
     it('should be false if bad', () => {
         const testVarHabOb_1 = true;
-        expect(setHabitTypeBad(testVarHabOb_1)).toBeFalsy;
+        expect(habits.setHabitTypeBad(testVarHabOb_1)).toBeFalsy;
     });
     //US 1
     //If need to show a list
@@ -36,11 +34,9 @@ describe('habits', () => {
         expect(testObjekter.habit).not.toBeNull();
     });
     it('should contain a name', () => {
-        expect(takeDataHabit.name).not.toBeNull();
+        expect(habits.takeDataHabit()).not.toBeNull();
     });
-    it('should contain good', () => {
-        expect(takeDataHabit.good).not.toBeNull();
-    });
+
 
 
 
