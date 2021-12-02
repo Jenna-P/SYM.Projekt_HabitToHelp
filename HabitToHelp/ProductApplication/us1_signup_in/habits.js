@@ -40,17 +40,18 @@ function setHabitTypeBad(habitType_2) {
 }
 
 function takeDataHabit() {
-    const test = 
-    testObjekter.habit[0].name ;
+    const test = testObjekter.habit[0].name ;
     return test;
-
-
 }
 
+function pressToDelete() {
+    var habit = testObjekter.habit[0];
+  //  document.getElementById("myBtn").addEventListener("click", habit);
+  habit = 1;
+    return Boolean(habit);
+}
 
-
-
-module.exports = {assignHabitName, checkHabitType, setHabitTypeGood, setHabitTypeBad, takeDataHabit};
+module.exports = {assignHabitName, checkHabitType, setHabitTypeGood, setHabitTypeBad, takeDataHabit, pressToDelete};
 
 /*var habit = {
     "habit" : [{

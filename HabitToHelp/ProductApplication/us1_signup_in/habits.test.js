@@ -35,12 +35,16 @@ describe('habits', () => {
     });
 
     //US 1.3 - Slette en vane
+    it('habit should exist', () => {
+        expect(habits.pressToDelete.habit).not.toBeNull();
+    });
+
     it('should be able to be deleted', () => {
-     //   expect(testObjekter.habit).not.toBeNull();
-  
+       expect(habits.pressToDelete()).toBeTruthy();
+    });
 
-
-
+    
+})
 
 
 
@@ -65,9 +69,5 @@ describe('habits', () => {
     /*it('should not be NaN', () => {
         expect(assignHabitType).not.toBe(Boolean);
     })*/
-
-});
-
-
 
 
