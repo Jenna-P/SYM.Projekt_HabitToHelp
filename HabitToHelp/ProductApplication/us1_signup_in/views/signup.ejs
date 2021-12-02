@@ -36,7 +36,6 @@
       <div class="wrapperRight">
         <h1 class="logo">Sign up for HabitToHelp</h1>
         <p>Please sign up for start track your habits.</p>
-        <%- include('globals/messages') %> 
         <section> 
           <form action="/signup/signUpSuccess" method="POST">
             <div class="form-group" id="signup">
@@ -75,6 +74,7 @@
                 placeholder="Create Password"
                 value="<%= typeof password != 'undefined' ? password : '' %>"
                 required
+                minlength="6"
               />
               <input
                 type="password"
@@ -84,6 +84,7 @@
                 placeholder="Confirm Password"
                 value="<%= typeof password_confirm != 'undefined' ? password_confirm : '' %>"
                 required
+                minlength="6"
               />
             <div>
             <button type="submit" id="signup">
