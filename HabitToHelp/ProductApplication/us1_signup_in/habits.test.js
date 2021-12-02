@@ -9,14 +9,10 @@ const testObjekter = require('./testObjekter');
 const habits = require('./habits');
 
 describe('habits', () => {
-    //US 1.1
+    //US 1.1 - Oprette en vane
     it('should have a name', () => {
         expect(habits.assignHabitName()).not.toBeNull();
     });
-    it('habit should not be empty', () => {
-        expect(habits.habitType).not.toBeNull();
-    });
-    //US 1.1.1
     it('habit should not be empty', () => {
         expect(habits.habitType).not.toBeNull();
     });
@@ -28,7 +24,8 @@ describe('habits', () => {
         const testVarHabOb_1 = true;
         expect(habits.setHabitTypeBad(testVarHabOb_1)).toBeFalsy;
     });
-    //US 1
+
+    //US 1 - Se liste over vaner
     //If need to show a list
     it('should contain at least one item', () => {
         expect(testObjekter.habit).not.toBeNull();
@@ -36,6 +33,13 @@ describe('habits', () => {
     it('should contain a name', () => {
         expect(habits.takeDataHabit()).not.toBeNull();
     });
+
+    //US 1.3 - Slette en vane
+    it('should be able to be deleted', () => {
+     //   expect(testObjekter.habit).not.toBeNull();
+  
+
+
 
 
 
