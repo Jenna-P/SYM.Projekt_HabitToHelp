@@ -46,6 +46,8 @@
                 class="form-control"
                 placeholder="Enter Name"
                 value="<%= typeof name != 'undefined' ? name : '' %>"
+                oninvalid="this.setCustomValidity('Please Enter Name Here')"
+                oninput="this.setCustomValidity('')" 
                 required
               />
               <input
@@ -55,6 +57,8 @@
                 class="form-control"
                 placeholder="Enter UserName"
                 value="<%= typeof username != 'undefined' ? username : '' %>"
+                oninvalid="this.setCustomValidity('Please Enter User Name Here')"
+                oninput="this.setCustomValidity('')"
                 required
               />
               <input
@@ -64,6 +68,8 @@
                 class="form-control"
                 placeholder="Enter Email"
                 value="<%= typeof email != 'undefined' ? email : '' %>"
+                oninvalid="this.setCustomValidity('Please Enter E-mail Here')"
+                oninput="this.setCustomValidity('')" 
                 required
               />
               <input
@@ -73,6 +79,8 @@
                 class="form-control"
                 placeholder="Create Password"
                 value="<%= typeof password != 'undefined' ? password : '' %>"
+                pattern="^\S{6,}$"
+                onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Must have at least 6 characters' : ''); if(this.checkValidity()) form.password_confirm.pattern = this.value;" 
                 required
                 minlength="6"
               />
@@ -83,6 +91,8 @@
                 class="form-control" 
                 placeholder="Confirm Password"
                 value="<%= typeof password_confirm != 'undefined' ? password_confirm : '' %>"
+                pattern="^\S{6,}$"
+                onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Please enter the same Password as above' : '');" placeholder="Verify Password"
                 required
                 minlength="6"
               />
