@@ -1,5 +1,10 @@
 # Systemudviklingsprojekt 2021
 
+
+## Planlægning ift. cyklus'
+<img src="/HabitToHelp/TimeEstimation/cycleTable.png" alt="cycleTable" width="500px">
+<br>
+
 ## Relevante links til docs:
 
 ### Rapporten: 
