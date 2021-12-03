@@ -61,7 +61,7 @@ function editHabit() {
     habitName = newName;
     habitType = newGood;
 
-    return [newName, newGood];
+    return [habitName, habitType];
 }
 
 
