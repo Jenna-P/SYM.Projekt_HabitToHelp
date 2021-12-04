@@ -1,13 +1,15 @@
 const { Router } = require('express');
 const express = require('express');
 const router = express.Router();
+const passport = require('passport'); //for auth
 //const { ensureAuthenticated, forwardAuthenticated } = require('../config/auth');
 
-//GET routes index page
-router.get("/",  (req, res) => res.render('index'));
 
+//GET routes sign up success page
+router.get("/",  (req, res) => res.render('signUpSuccess'));
 
-//POST success redirect to dashboard or fallback to index
+/*I did seperately routes 
+cus we need to do login auth here  as index login post */ 
 router.post("/",  (req, res) => {
     const {email, password} = req.body;
     const newSignIn = {
@@ -18,4 +20,6 @@ router.post("/",  (req, res) => {
     res.status(201).redirect('/dashboard'); //success scenario. 
 });
 
+
 module.exports = router;
+
