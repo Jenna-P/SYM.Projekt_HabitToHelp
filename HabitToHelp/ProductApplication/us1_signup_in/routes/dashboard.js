@@ -1,8 +1,12 @@
 const express = require('express');
 const router = express.Router();
+const port = 3000;
+const testObjects = require('../testObjekter');
 
 //GET routes dashboard page
-router.get("/", (req, res) => res.render('dashboard'));
+//router.get("/dashboard", (req, res) => res.render('dashboard', {user: 'Kevin'}));
+
+router.get('/', (req, res) => res.send('Hello World'))
 
 //after login find all with same userID in mongoose
 //and get habit list, username from DB

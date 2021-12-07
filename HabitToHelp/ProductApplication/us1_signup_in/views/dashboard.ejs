@@ -38,6 +38,13 @@
     <div class='container'>    
         <h1>Dashboard</h1>
 
+          <!--Put frontend here-->
+          <ul>
+            <% habits.forEach(function(habit){ %>
+              <li><%= habit.name %></li>
+            <% }); %>
+          </ul>
+
     </div>
   </div>   
 </div>      
