@@ -32,7 +32,7 @@ mongoose.connect(db, { useNewUrlParser: true })
 //set session store - model/schema  
 var store = new MongoDBStore({
   uri: db,
-  collection: 'mySession'
+  collection: 'mySession',
 });
 
 //save session to DB - sets session for user on db.
