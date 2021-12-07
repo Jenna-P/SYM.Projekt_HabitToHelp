@@ -3,6 +3,9 @@ const express = require('express');
 const router = express.Router();
 //const { ensureAuthenticated, forwardAuthenticated } = require('../config/auth');
 
+//password encrypt
+const bcrypt = require('bcryptjs');
+
 //import model
 const User = require('../models/User');
 
@@ -47,11 +50,23 @@ router.post("/", (req, res, next) => {
             name,
             email,
             password,
+      });
+
+      //hash pw (use bcrypt)
+      bcrypt.genSalt(10, (err, salt) => {
+        bcrypt.hash(newUser.password, salt, (err, hash) => {
+           if(err) throw err;
+           //Set pw to hashed
+          newUser.password = hash;
+          //save users to DB
+          newUser.save() //when user get saved db
+          .then(user => { //give us promise
+             res.redirect('/signUpSuccess');
+          })
+          .catch(err => console.log(err));
         });
-        console.log(newUser);
-        newUser.save(); //db save
-        res.status(201).redirect('/signUpSuccess');
-      }
+      });
+    }
 })
 
 module.exports = router;
