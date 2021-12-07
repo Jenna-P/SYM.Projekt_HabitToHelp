@@ -51,214 +51,241 @@ footer {
 }
 
 /*logo left*/
-  a.logo {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 40px;
-  }
+a.logo {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 40px;
+}
 
-  .rightTopMenu {
-    padding-top: 10px;
-    float: right;
-  }
-  /* right topmenubar button and span*/
-  span {
-    font-size: 15px;
-    padding-right: 10px;
-    color: #ffffff;
-  }
+.rightTopMenu {
+  padding-top: 10px;
+  float: right;
+}
+/* right topmenubar button and span*/
+span {
+  font-size: 15px;
+  padding-right: 10px;
+  color: #ffffff;
+}
 
-  form#createAccountButton{
-    display: inline-block;
-  }
+form#createAccountButton {
+  display: inline-block;
+}
 
-  button {
-    background: #000000;
-    font-family: "Oswald", sans-serif;
-    color: #ffffff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 19px;
-  }
+button {
+  background: #000000;
+  font-family: "Oswald", sans-serif;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 19px;
+}
 
-  /* Welcomepage */
-  .wrapper {
-    background-color: #0c8bce;
-    height: 100%;
-    position: relative;
-    padding: 30px;
-    padding-top: 10px;
-  }
+/* Welcomepage */
+.wrapper {
+  background-color: #0c8bce;
+  height: 100%;
+  position: relative;
+  padding: 30px;
+  padding-top: 10px;
+}
 
-  .container {
-    margin: 0;
-    padding: 0;
-    text-align: justify;
-    height: 100%;
-  }
+.container {
+  margin: 0;
+  padding: 0;
+  text-align: justify;
+  height: 100%;
+}
 
-  /*Site sections left/right*/
-  .main {
-    display: inline-block;
-    vertical-align: middle;
-  }
+/*Site sections left/right*/
+.main {
+  display: inline-block;
+  vertical-align: middle;
+}
 
-  /* image container*/
-  .wrapperLeft {
-    padding: 10%;
-    background: rgba(00, 00, AA, 0.5);
-    position: relative;
-    left: 50%;
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    color: #ffffff;
-    background-color: rgba(15, 5, 5, 0.3);
-  }
+/* image container*/
+.wrapperLeft {
+  padding: 10%;
+  background: rgba(00, 00, AA, 0.5);
+  position: relative;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  background-color: rgba(15, 5, 5, 0.3);
+}
 
-  .left {
-    width: 50%;
-    background: url("../images/indexImg.jpg") no-repeat center;
-    background-size: cover;
-    height: 100%;
-    float: left;
-  }
+.left {
+  width: 50%;
+  background: url("../images/indexImg.jpg") no-repeat center;
+  background-size: cover;
+  height: 100%;
+  float: left;
+}
 
-  .left#signup{
-    background: url("../images/signUpImg.jpg") no-repeat center;
-    background-size: cover;
-  }
+.left#signup {
+  background: url("../images/signUpImg.jpg") no-repeat center;
+  background-size: cover;
+}
 
-  .form-group#signup{
-    margin-top: 20px;
-  }
+.form-group#signup {
+  margin-top: 20px;
+}
 
-  /* Signin form container right */
-  .wrapperRight {
-    padding: 10%;
-    background: rgba(00, 00, AA, 0.5);
-    position: relative;
-    left: 50%;
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    color: #ffffff;
-  }
-  .right {
-    height: 100%;
-    width: 50%;
-    background: #ffffff;
-  }
-  .wrapperRight .logo,
-  .wrapperRight p {
-    text-align: center;
-    color: #000000;
-  }
+/* Signin form container right */
+.wrapperRight {
+  padding: 10%;
+  background: rgba(00, 00, AA, 0.5);
+  position: relative;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+}
+.right {
+  height: 100%;
+  width: 50%;
+  background: #ffffff;
+}
+.wrapperRight .logo,
+.wrapperRight p {
+  text-align: center;
+  color: #000000;
+}
 
-  label {
-    color: #000000;
-  }
-  
-  /*Login form*/
-  section form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    flex-direction: column;
-  }
+label {
+  color: #000000;
+}
 
-  input {
-    width: 100%;
-    margin-bottom: 10px;
-    border: 1px solid #000000;
-    padding: 10px;
-    padding-right: 0;
-  }
+/*Login form*/
+section form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
 
-  label {
-    color: #000000;
-  }
-  a.forgotPassword {
-    display: block;
-    text-align: right;
-    width: 85%;
-    color: #0c8bce;
-    width: 340px;
-    color: #0c8bce;
-    text-decoration: none;
-  }
-  button.submitButton {
-    margin-top: 40px;
-    width: 81%;
-    margin-left: 3%;
-    max-width: 100px;
-  }
-  button#signup {
-    margin-top: 40px;
-    width: 24%;
-    margin-left: 40%;
-    max-width: 100px;
-  }
+input {
+  width: 100%;
+  margin-bottom: 10px;
+  border: 1px solid #000000;
+  padding: 10px;
+  padding-right: 0;
+}
 
+label {
+  color: #000000;
+}
+a.forgotPassword {
+  display: block;
+  text-align: right;
+  width: 85%;
+  color: #0c8bce;
+  width: 340px;
+  color: #0c8bce;
+  text-decoration: none;
+}
+button.submitButton {
+  margin-top: 40px;
+  width: 81%;
+  margin-left: 3%;
+  max-width: 100px;
+}
+button#signup {
+  margin-top: 40px;
+  width: 24%;
+  margin-left: 40%;
+  max-width: 100px;
+}
 
-  /* DASHBOARD */
-  .dashboardMenu.Left {
-      display: inline-block;
-  }
+/* DASHBOARD */
+.dashboardMenu.Left {
+  display: inline-block;
+}
 
-    .username p, .levelContainer p, .XPContainer p, .XPContainer #progressBar {
-      margin: 0px;
-      color: #ffffff;
-      text-align: right;
-      margin-bottom: 2px;
-      font-size: 13px;
-    }
-    .levelContainer p span {
-      padding-right: 0;
-    }
+.username p,
+.levelContainer p,
+.XPContainer p,
+.XPContainer #progressBar {
+  margin: 0px;
+  color: #ffffff;
+  text-align: right;
+  margin-bottom: 2px;
+  font-size: 13px;
+}
+.levelContainer p span {
+  padding-right: 0;
+}
 
-    progress#progressBar {
-      float: left;
-      border-radius: 7px;
-      width: 70px;
-      height: 10px;
-      box-shadow: none;
-      margin-top: 2px !important;
-    }
-      progress::-webkit-progress-bar {
-        background-color: #ffffff;
-        border-radius: 0;
-      }
-      progress::-webkit-progress-value {
-        background-color: #000000;
-        border-radius: 0;
-        box-shadow: none;
-      }
+progress#progressBar {
+  float: left;
+  border-radius: 7px;
+  width: 70px;
+  height: 10px;
+  box-shadow: none;
+  margin-top: 2px !important;
+}
+progress::-webkit-progress-bar {
+  background-color: #ffffff;
+  border-radius: 0;
+}
+progress::-webkit-progress-value {
+  background-color: #000000;
+  border-radius: 0;
+  box-shadow: none;
+}
 
+.XPContainer p {
+  float: right;
+  padding-left: 10px;
+}
 
-    .XPContainer p {
-      float: right;
-      padding-left: 10px;
-    }
+.dashboardMenu.Right {
+  float: right;
+  margin-left: 10px;
+}
+.dashboardMenu.Right a img {
+  height: 50px;
+  display: inline-block;
+}
 
-  .dashboardMenu.Right {
-      float: right;
-      margin-left: 10px;
-  }
-    .dashboardMenu.Right a img {
-      height: 50px;
-      display: inline-block;
-    }
+/*Main content #dashboard*/
+#dashboard .container {
+  background: #ffffff;
+  padding: 20px;
+}
+#dashboard .wrapper {
+  margin-bottom: 100px;
+}
+#dashboard h1 {
+  margin: 0;
+}
 
-  /*Main content #dashboard*/
-    #dashboard .container{
-      background: #ffffff;
-      padding: 20px;
-    }
-    #dashboard .wrapper{
-      margin-bottom: 100px;
-    }
-    #dashboard h1{
-      margin: 0;
-    }
+/*faild Sign in */
+.buttonContainer {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+#failedSignIn #createButtonForm {
+  margin-top: 20px;
+}
+
+#failedSignIn #createButtonForm button {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+#failedSignIn #loginButtonForm {
+  margin-top: 20px;
+}
+
+#failedSignIn #loginButtonForm button {
+  display: inline-block;
+  margin-right: 10px;
+}

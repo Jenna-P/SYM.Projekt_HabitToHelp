@@ -13,7 +13,7 @@
     <!--Script js-->
     <script type="text/javascript" src="/javascript/customStyleFunctions.js"></script>
 </head>
-<body>
+<body id="failedSignIn">
   <div class='wrapper'>    
     <div class="menu">
       <a href="/" class="logo">HabitToHelp</a>
@@ -35,12 +35,14 @@
       <div class="wrapperRight">
         <h1 class="logo">Your login failed</h1>
         <p>Please sign up for start track your habits.</p>
-        <form method="get" action="/signup">
-            <button type="submit">Create new account</button>
-        </form>
-        <form method="get" action="/signUpSuccess">
-            <button type="submit">Go to login</button>
-        </form>
+        <div class="buttonContainer">
+          <form id="createButtonForm" method="get" action="/signup">
+              <button  type="submit">Go to sign up</button>
+          </form>
+          <form id ="loginButtonForm" method="get" action="/signUpSuccess">
+              <button type="submit">Go to login</button>
+          </form>
+        </div>
       </div>
     </div>
   </div>   
