@@ -9,6 +9,15 @@ var signUpRouter = require('./routes/signup');
 var dashboardRouter = require('./routes/dashboard');
 var signUpSuccessRouter = require('./routes/signUpSuccess');
 
+//.env
+require('dotenv').config();
+
+//mongodb and auth
+const mongoose = require('mongoose');
+const passport = require('passport');
+const session = require('express-session');
+const flash = require('connect-flash');
+var MongoDBStore = require('connect-mongodb-session')(session);
 
 var app = express();
 
@@ -42,5 +51,13 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+//Mongo DB Atlas
+
+var dburl = process.env.DBURL;
+
+
+
+
 
 module.exports = app;
