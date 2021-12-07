@@ -3,9 +3,11 @@ const express = require('express');
 const router = express.Router();
 //const { ensureAuthenticated, forwardAuthenticated } = require('../config/auth');
 
+//import model
+const User = require('../models/User');
+
 //GET routes sign up page
 router.get("/",  (req, res) => res.render('signup'));
-
 
 router.post("/", (req, res, next) => {
     const {username, name, email, password, password_confirm} = req.body;
@@ -39,16 +41,15 @@ router.post("/", (req, res, next) => {
         console.log('err');
        
       } else {
-        //create new user 
-        const newUser = {
+        //create new user for db
+        const newUser = new User({
             username,
             name,
             email,
-            password
-            
-        };
+            password,
+        });
         console.log(newUser);
-        //res.status(201).send(newUser); //should render to welcome/login page with success msg
+        newUser.save(); //db save
         res.status(201).redirect('/signUpSuccess');
       }
 })
