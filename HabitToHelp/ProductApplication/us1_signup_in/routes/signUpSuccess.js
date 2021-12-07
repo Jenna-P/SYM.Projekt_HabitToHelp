@@ -24,7 +24,7 @@ router.post("/",  (req, res) => {
 router.post('/', (req, res, next) => {
     passport.authenticate('local', {  //using local strategy 
         successRedirect: '/dashboard',
-        failureRedirect: '/',  //if fail redirect to login page.
+        failureRedirect: '/failedSignIn', //if fail redirect to login page.
         failureFlash: true
     })(req, res, next);
 });

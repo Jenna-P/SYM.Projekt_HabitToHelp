@@ -12,9 +12,13 @@ router.get("/",  (req, res) => res.render('index'));
 router.post('/', (req, res, next) => {
     passport.authenticate('local', {  //using local strategy 
       successRedirect: '/dashboard',
-      failureRedirect: '/',  //fail  : go back to login page
+      failureRedirect: '/failedSignIn',  //fail  : go back to login page
       failureFlash: true
     })(req, res, next);    
 });
+
+router.get('/failedSignIn', (req, res) =>{
+    res.render('failedSignIn');
+})
 
 module.exports = router;

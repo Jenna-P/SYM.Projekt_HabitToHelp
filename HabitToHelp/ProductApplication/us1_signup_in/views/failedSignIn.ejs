@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HabitToHelp</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+    <!--Google font added-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet"></head>        
+    <!--Script js-->
+    <script type="text/javascript" src="/javascript/customStyleFunctions.js"></script>
+
+</head>
+<body>
+  <div class='wrapper'>    
+    <div class="menu">
+      <a href="/" class="logo">HabitToHelp</a>
+      <div class="rightTopMenu">
+        <span>Already have an account?</span>
+          <form action="/" id="createAccountButton" method="GET">
+            <button id="createAccountButton">Sign in</button>
+          </form>
+      </div>
+    </div>
+    <div class='container'>    
+      <div class='main left' id="signup">
+        <div class="wrapperLeft">
+          <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam.</p>
+        </div>
+      </div>
+      
+    <div class='main right'>
+      <div class="wrapperRight">
+        <h1 class="logo">Your login failed</h1>
+        <p>Please sign up for start track your habits.</p>
+        <form method="get" action="/signup">
+            <button type="submit" value="Go to signup"></button>
+        </form>
+      </div>
+    </div>
+  </div>   
+</div>      
+<%- include("globalElements/footer") %>
+</body>
+</html>
+
