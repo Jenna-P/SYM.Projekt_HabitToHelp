@@ -38,12 +38,15 @@
     <div class='container'>    
         <h1>Dashboard</h1>
 
-          <!--Put frontend here-->
+       
+          <h2> Habits </h2>
           <ul>
-            <% habits.forEach(function(habit){ %>
+            <% habit_list.habit.forEach(function(habit){ %>
               <li><%= habit.name %></li>
             <% }); %>
           </ul>
+
+          <!--html form til oprettelse ad habit + action-->
 
     </div>
   </div>   
