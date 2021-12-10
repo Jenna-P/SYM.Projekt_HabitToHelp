@@ -9,12 +9,16 @@ const mongoose = require('mongoose');
 const startDate = new Date("DD-MM-YYYY");
 
 const HabitSchema = new mongoose.Schema({
-    name: {
+    habitName: {
+        type: String,
+        require: true
+    },
+    habitDescription: {
         type: String,
         require: true
     },
     category: {
-        type: Boolean,
+        type: String,
         require: true
     },
     frequency: {

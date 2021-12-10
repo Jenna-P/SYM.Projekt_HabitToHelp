@@ -18,9 +18,21 @@ router.get('/', (req, res) => {
     //find user and match id and get habits from DB
 });
 
+router.post('/', (req, res) => { 
+    const {habitName, habitDescription, category, frequency, date, userID} = req.body;
+//create new habit
+const newHabit = new Habit({
+    habitName,
+    habitDescription,
+    category,
+    frequency,
+    date,
+    userId: req.user._id
 
-
-
+});
+//save to DB
+newHabit.save();
+});
     
 //after login find all with same userID in mongoose
 //and get habit list, username from DB
