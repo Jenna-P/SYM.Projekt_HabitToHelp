@@ -289,3 +289,7 @@ progress::-webkit-progress-value {
   display: inline-block;
   margin-right: 10px;
 }
+
+#dashboard .createHabit #habitForm {
+  margin: 20px;
+}

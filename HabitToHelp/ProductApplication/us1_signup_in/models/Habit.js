@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
 
-const frequency = Object.freeze({
-    hourly,
-    daily, 
-    monthly
-});
+// const frequency = Object.freeze({ 
+//     daily, 
+//     weekly,
+//     monthly
+// });
 
 const startDate = new Date("DD-MM-YYYY");
 
@@ -18,7 +18,7 @@ const HabitSchema = new mongoose.Schema({
         require: true
     },
     frequency: {
-        frequency,
+        type: String,
         require: true
     },
     startDate: {

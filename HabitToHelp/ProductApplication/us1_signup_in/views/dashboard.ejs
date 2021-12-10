@@ -47,8 +47,28 @@
           </ul>
 
           <!--html form til oprettelse ad habit + action-->
-
+          <!-- should maybe be modal -->
+      <div class="createHabit">
+        <form action="/dashboard" method="POST" id="habitForm">
+          <input type="text" name="habit" placeholder="Enter Habit name">
+          <label for=“category”>Choose a category:</label>
+          <select name="category" id="category" form="habitForm">
+            <option value="good">Good</option>
+            <option value="bad">Bad</option> 
+           </select> 
+           <label for=“frequency”>Choose a frequency:</label>
+           <select name="chooseFrequency" id="chooseFrequency" form="habitForm">
+            <option value="daily">Daily</option> 
+            <option value="weekly">Weekly</option> 
+            <option value="monthly">Monthly</option> 
+           </select> 
+           <label for=“date”>Choose starte date:</label>
+           <input type="date" id=“date” name="date">
+          <button type="submit">ADD</button>
+        </form>
+      </div>
     </div>
+    
   </div>   
 </div>      
 <%- include("globalElements/footer") %>
