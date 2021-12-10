@@ -294,14 +294,14 @@ progress::-webkit-progress-value {
   margin: 20px;
 }
 
-
 /*Dashboard form style*/
 form#habitForm {
   border: solid 1px lightgrey;
   padding: 20px;
   margin-left: 0 !important;
 }
-#dashboard .categoryContainer, #dashboard .frequencyContainer{
+#dashboard .categoryContainer,
+#dashboard .frequencyContainer {
   margin-bottom: 20px;
 }
 
@@ -315,10 +315,10 @@ form#habitForm {
   padding-bottom: 5px;
   font-weight: 900;
 }
-#dashboard select#category, #dashboard select#frequency {
+#dashboard select#category,
+#dashboard select#frequency {
   padding: 5px;
 }
-
 
 input#habitName {
   margin-top: 5px;
@@ -334,6 +334,10 @@ body#dashboard #textDescription {
   max-width: 290px;
 }
 
-input#date{
+input#date {
   max-width: 200px;
+}
+
+.habitListBox {
+  border: 1px solid green;
 }

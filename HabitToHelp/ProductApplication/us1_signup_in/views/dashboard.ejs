@@ -42,7 +42,9 @@
           <h2> Habits </h2>
           <ul>
             <% habits.forEach(function(habit){ %>
+              <div class="habitListBox">
               <li><%= habit.habitName %></li>
+              </div>
             <% }); %>
           </ul>
 
