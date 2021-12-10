@@ -14,7 +14,7 @@ const Habit = require('../models/Habit');
 //GET routes dashboard page
 router.  get('/', async (req, res) => { 
     //find user and match id and get habits from DB
-    let habit_list = await Habit.find({userId : req.user._id});
+    let habit_list = await Habit.find({userID : req.user._id});
     console.log(habit_list);
     //req.user til at vise username
     res.render('dashboard', {
