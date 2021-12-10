@@ -3,31 +3,37 @@ const router = express.Router();
 //const port = 3000;
 const testObjects = require('../testObjekter');
 /*
-1. HTML form input text(habit), selecter(good, bad), datePicker??  til DB
 2. list div box  ?
-3. 
+3. google : EJS change div box style to red if category value is bad
+
 */
 
 const Habit = require('../models/Habit');
 
 //GET routes dashboard page
-router.get('/', (req, res) => { 
-    let habit_list = {testObjects} 
-    res.render('dashboard', {habit_list: testObjects});
-    //req.user til at vise username
+router.  get('/', async (req, res) => { 
     //find user and match id and get habits from DB
+    let habit_list = await Habit.find({userId : req.user._id});
+    console.log(habit_list);
+    //req.user til at vise username
+    res.render('dashboard', {
+        habits: habit_list,
+        username: req.user.username,
+    });
+    
+    
 });
 
 router.post('/', (req, res) => { 
-    const {habitName, habitDescription, category, frequency, date, userID} = req.body;
+    const {habitName, habitDescription, category, frequency, startDate} = req.body;
 //create new habit
 const newHabit = new Habit({
     habitName,
     habitDescription,
     category,
     frequency,
-    date,
-    userId: req.user._id
+    startDate,
+    userID: req.user._id
 
 });
 //save to DB
@@ -35,23 +41,10 @@ newHabit.save();
 });
     
 //after login find all with same userID in mongoose
-//and get habit list, username from DB
 
 
-/* router.post   (form action  : save habit data)
-when habit added (button submit), get there id 
-and save data with that */
 
-//router.post
 
-/*
-This is model : const newHabit = new Habit({
-habit: req.body.habitInput,
-good: get chosen value from user(browser) (dnt know syntax),
-userID: req.user._id 
-
-});
-*/
 
 
 module.exports = router;

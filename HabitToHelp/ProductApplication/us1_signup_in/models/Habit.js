@@ -30,7 +30,7 @@ const HabitSchema = new mongoose.Schema({
         startDate,
         require: true
     },
-    userId: {
+    userID: {
         type: String,
         require: true
     }

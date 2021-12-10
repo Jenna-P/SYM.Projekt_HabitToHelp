@@ -18,7 +18,7 @@
       <div class="rightTopMenu">
         <div class="dashboardMenu Left">
             <div class="username">
-                <p>Username</p>
+                <p><%= username %></p>
             </div>
             <div class="levelContainer">
                 <p>Level <span>X</span></p> 
@@ -41,8 +41,8 @@
        
           <h2> Habits </h2>
           <ul>
-            <% habit_list.habit.forEach(function(habit){ %>
-              <li><%= habit.name %></li>
+            <% habits.forEach(function(habit){ %>
+              <li><%= habit.habitName %></li>
             <% }); %>
           </ul>
 
@@ -71,8 +71,8 @@
               </select> 
             </div>
             <div class="dateContainer">
-              <label for=“date”>Choose starte date:</label>
-             <input type="date" id="date" name="date">
+              <label for=“startDate”>Choose starte date:</label>
+             <input type="date" id="startDate" name="startDate">
             </div>
             <button type="submit">ADD</button>
         </form>
