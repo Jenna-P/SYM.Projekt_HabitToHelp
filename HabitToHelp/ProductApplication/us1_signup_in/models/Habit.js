@@ -1,24 +1,28 @@
 const mongoose = require('mongoose');
 
-const frequency = Object.freeze({
-    hourly,
-    daily, 
-    monthly
-});
+// const frequency = Object.freeze({ 
+//     daily, 
+//     weekly,
+//     monthly
+// });
 
 const startDate = new Date("DD-MM-YYYY");
 
 const HabitSchema = new mongoose.Schema({
-    name: {
+    habitName: {
+        type: String,
+        require: true
+    },
+    habitDescription: {
         type: String,
         require: true
     },
     category: {
-        type: Boolean,
+        type: String,
         require: true
     },
     frequency: {
-        frequency,
+        type: String,
         require: true
     },
     startDate: {
@@ -26,7 +30,7 @@ const HabitSchema = new mongoose.Schema({
         startDate,
         require: true
     },
-    userId: {
+    userID: {
         type: String,
         require: true
     }
