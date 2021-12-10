@@ -332,6 +332,7 @@ body#dashboard #textDescription {
   padding: 10px;
   font-family: Arial, Helvetica, sans-serif;
   max-width: 290px;
+  
 }
 
 input#date {
@@ -339,5 +340,17 @@ input#date {
 }
 
 .habitListBox {
+    max-width: 400px;
+}
+
+body#dashboard ul {
+  padding-left: 0;
+}
+
+body#dashboard li {
+  color: green;
+  list-style: none;
+  padding: 5px;
   border: 1px solid green;
+  margin-bottom: 10px;
 }
