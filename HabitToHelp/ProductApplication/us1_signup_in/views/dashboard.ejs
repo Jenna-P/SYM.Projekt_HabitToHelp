@@ -26,15 +26,22 @@
         </div>        
       </div>
     </div>
+    <a href="#" id="signOut">Sign out</a>
     <div class="container">    
         <h1>Dashboard</h1>
 
           <h2> Habits </h2>
           <ul>
             <% habits.forEach(function(habit){ %>
-              <div class="habitListBox">
-              <li><%= habit.habitName %></li>
-              </div>
+              <% if(habit.category ==='bad'){ %>
+                <div class="habitListBox">
+                  <li class="categoryBad"><%= habit.habitName %></li>
+                  </div>
+                  <% } else{ %>  
+                    <div class="habitListBox">
+                      <li><%= habit.habitName %></li>
+                      </div> 
+                 <% } %>
             <% }); %>
           </ul>
 
