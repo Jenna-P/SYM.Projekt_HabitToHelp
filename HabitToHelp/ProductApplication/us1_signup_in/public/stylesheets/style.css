@@ -231,6 +231,7 @@ button#signup {
   padding: 10px 20px;
   font-size: 19px;
   float: right;
+  text-decoration: none;
 }
 
 .username p,

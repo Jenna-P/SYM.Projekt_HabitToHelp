@@ -8,11 +8,10 @@ const testObjects = require('../testObjekter');
 
 */
 
-
 const Habit = require('../models/Habit');
 
 //GET routes dashboard page
-router.  get('/', async (req, res) => { 
+router.get('/', async (req, res) => { 
     //find user and match id and get habits from DB
     let habit_list = await Habit.find({userID : req.user._id});
     res.cookie('habits', habit_list);
@@ -27,25 +26,19 @@ router.  get('/', async (req, res) => {
 
 router.post('/', (req, res) => { 
     const {habitName, habitDescription, category, frequency, startDate} = req.body;
-//create new habit
-const newHabit = new Habit({
-    habitName,
-    habitDescription,
-    category,
-    frequency,
-    startDate,
-    userID: req.user._id
-});
-//save to DB
-newHabit.save();
-res.redirect('/dashboard'); //when post route succes redirect.
-});
-    
+    //create new habit
+    const newHabit = new Habit({
+        habitName,
+        habitDescription,
+        category,
+        frequency,
+        startDate,
+        userID: req.user._id
+    });
+    //save to DB
+    newHabit.save();
+    res.redirect('/dashboard'); //when post route succes redirect.
+});    
 //after login find all with same userID in mongoose
-
-
-
-
-
 
 module.exports = router;

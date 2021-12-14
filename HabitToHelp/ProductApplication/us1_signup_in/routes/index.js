@@ -21,4 +21,10 @@ router.get('/failedSignIn', (req, res) =>{
     res.render('failedSignIn');
 })
 
+router.get('/signOut', (req, res) =>{
+  req.logOut();
+  res.clearCookie(); //Sessions cookie clear - passport automatically deleted.  
+  res.render('index');
+});
+
 module.exports = router;
