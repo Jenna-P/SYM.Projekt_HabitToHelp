@@ -208,6 +208,7 @@ button#signup {
 /* DASHBOARD */
 .dashboardMenu.Left {
   display: inline-block;
+  float: left;
 }
 
 .username{
