@@ -29,6 +29,7 @@
       </div>
     </div>
     <div class="container">    
+      <button id="createHabitButton">+ Add new habit</button> <!--modal new habit button-->
       <h1>Dashboard</h1>
           <h2> Habits </h2>
           <ul>
@@ -44,37 +45,45 @@
                  <% } %>
             <% }); %>
           </ul>
-          <!--html form til oprettelse ad habit + action-->
 
-    <div class="createHabit">
-        <h2>Create new habit </h2>
-        <form action="/dashboard" method="POST" id="habitForm">
-          <label for=habitName>Habit name:</label>
-          <input type="text" name="habitName" id="habitName" placeholder="E.g. Running">
-          <label for="habitDescription">Habit description:</label>
-          <textarea id="habitDescription" name="habitDescription" rows="4" cols="50" placeholder="E.g. Your goal or purpose for this habit."></textarea>
-          <div class="categoryContainer">
-            <label for=“category”>Choose a category:</label>
-            <select name="category" id="category" form="habitForm">
-              <option value="good">Good</option>
-              <option value="bad">Bad</option> 
-            </select> 
+      <!--modal - create new habit-->
+      <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <div class="createHabit">
+            <h2>Create new habit </h2>
+            <form action="/dashboard" method="POST" id="habitForm">
+              <label for=habitName>Habit name:</label>
+              <input type="text" name="habitName" id="habitName" placeholder="E.g. Running">
+              <label for="habitDescription">Habit description:</label>
+              <textarea id="habitDescription" name="habitDescription" rows="4" cols="50" placeholder="E.g. Your goal or purpose for this habit."></textarea>
+              <div class="categoryContainer">
+                <label for=“category”>Choose a category:</label>
+                <select name="category" id="category" form="habitForm">
+                  <option value="good">Good</option>
+                  <option value="bad">Bad</option> 
+                </select> 
+              </div>
+              <div class="frequencyContainer">
+                  <label for=“frequency”>Choose a frequency:</label>
+                  <select name="frequency" id="frequency" form="habitForm">
+                    <option value="daily">Daily</option> 
+                    <option value="weekly">Weekly</option> 
+                    <option value="monthly">Monthly</option> 
+                  </select> 
+                </div>
+                <div class="dateContainer">
+                  <label for=“startDate”>Choose starte date:</label>
+                <input type="date" id="startDate" name="startDate">
+                </div>
+                <button type="submit">ADD</button>
+            </form>
           </div>
-           <div class="frequencyContainer">
-              <label for=“frequency”>Choose a frequency:</label>
-              <select name="frequency" id="frequency" form="habitForm">
-                <option value="daily">Daily</option> 
-                <option value="weekly">Weekly</option> 
-                <option value="monthly">Monthly</option> 
-              </select> 
-            </div>
-            <div class="dateContainer">
-              <label for=“startDate”>Choose starte date:</label>
-             <input type="date" id="startDate" name="startDate">
-            </div>
-            <button type="submit">ADD</button>
-        </form>
-    </div>
+        </div>
+      </div><!--modal ends-->
+
     </div>
   </div>   
 </div>      
