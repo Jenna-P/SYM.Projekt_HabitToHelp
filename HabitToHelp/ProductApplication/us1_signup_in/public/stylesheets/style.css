@@ -476,3 +476,14 @@ body#dashboard li:hover {
         position: relative !important;
         left: 10px;  
       }
+
+/*customHello section*/
+.customHello {
+  border-bottom: solid 1px #eaeaea;
+  width: 400px;
+  margin-bottom: 40px;
+  padding-bottom: 30px;
+}
+  .customHello {
+    font-size: 20px;
+  }

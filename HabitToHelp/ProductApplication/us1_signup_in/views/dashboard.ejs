@@ -31,6 +31,9 @@
     <div class="container">    
       <button id="createHabitButton">+ Add new habit</button> <!--modal new habit button-->
       <h1>Dashboard</h1>
+        <div class="customHello">
+          <p>Hello, <%= name %></p>
+        </div>
           <h2> Habits </h2>
           <ul>
             <% habits.forEach(function(habit){ %>

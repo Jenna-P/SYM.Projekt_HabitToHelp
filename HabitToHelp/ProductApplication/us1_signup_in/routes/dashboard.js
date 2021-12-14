@@ -21,9 +21,8 @@ router.  get('/', async (req, res) => {
     res.render('dashboard', {
         habits: habit_list,
         username: req.user.username,
+        name: req.user.name,
     });
-    
-    
 });
 
 router.post('/', (req, res) => { 
@@ -36,11 +35,10 @@ const newHabit = new Habit({
     frequency,
     startDate,
     userID: req.user._id
-
 });
 //save to DB
 newHabit.save();
-res.redirect('/dashboard');
+res.redirect('/dashboard'); //when post route succes redirect.
 });
     
 //after login find all with same userID in mongoose
