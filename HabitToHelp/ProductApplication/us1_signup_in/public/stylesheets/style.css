@@ -49,6 +49,10 @@ footer {
 .menu {
   margin-bottom: 20px;
 }
+  /*on dashboard page*/
+  #dashboard .menu {
+      margin-bottom: 30px;
+  }
 
 /*logo left*/
 a.logo {
@@ -204,6 +208,29 @@ button#signup {
 /* DASHBOARD */
 .dashboardMenu.Left {
   display: inline-block;
+  float: left;
+}
+
+.username{
+  text-align: right;
+}
+.username a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.username a:hover {
+  text-decoration: underline;
+  color: #ffffff;
+}
+
+#signOut{
+  background: #000000;
+  font-family: "Oswald", sans-serif;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 19px;
+  float: right;
 }
 
 .username p,
@@ -244,8 +271,9 @@ progress::-webkit-progress-value {
 }
 
 .dashboardMenu.Right {
-  float: right;
+  float: left;
   margin-left: 10px;
+  margin-right: 10px;
 }
 .dashboardMenu.Right a img {
   height: 50px;

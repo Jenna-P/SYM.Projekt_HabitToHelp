@@ -24,13 +24,12 @@
             <a id="profileInformations" href="#">
                 <img src="/images/profileImg.png" alt="profileImg" />
             </a>
-        </div>        
+        </div>  
+        <a href="#" id="signOut">Sign out</a>      
       </div>
     </div>
-    <a href="#" id="signOut">Sign out</a>
     <div class="container">    
-        <h1>Dashboard</h1>
-
+      <h1>Dashboard</h1>
           <h2> Habits </h2>
           <ul>
             <% habits.forEach(function(habit){ %>
@@ -45,10 +44,8 @@
                  <% } %>
             <% }); %>
           </ul>
-
           <!--html form til oprettelse ad habit + action-->
 
-          
     <div class="createHabit">
         <h2>Create new habit </h2>
         <form action="/dashboard" method="POST" id="habitForm">
