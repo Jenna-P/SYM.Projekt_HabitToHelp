@@ -424,7 +424,7 @@ body#dashboard li:hover {
   top: -9px;
 }
 
-#dashboard form button {
+#dashboard .buttonContainerEditDeleteHabit form button {
   padding: 5px;
   margin-left: 5px;
   color: black;
