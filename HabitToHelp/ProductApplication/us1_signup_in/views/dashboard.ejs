@@ -11,7 +11,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">        
-</head>
+    <!--Fonts for icons-->
+    <script defer src="https://kit.fontawesome.com/bec4865bac.js" crossorigin="anonymous"></script>
+  </head>
 <body id="dashboard">
   <div class='wrapper'>    
     <div class="menu">
@@ -39,11 +41,31 @@
             <% habits.forEach(function(habit){ %>
               <% if(habit.category ==='bad'){ %>
                 <div class="habitListBox">
-                  <li class=" testHabit categoryBad" onclick="addActiveId()"><%= habit.habitName %></li>
+                  <li class=" testHabit categoryBad" onclick="addActiveId()">
+                    <%= habit.habitName %>
+                    <div class="buttonContainerEditDeleteHabit">
+                      <form action="#" method="put">
+                        <button type="submit"><i class="far fa-edit"></i></button>                      
+                      </form>
+                      <form action="#" method="delete">
+                        <button type="submit"><i class="fas fa-times"></i></button>                      
+                      </form>    
+                    </div>
+                  </li>
                   </div>
                   <% } else{ %>  
                     <div class="habitListBox">
-                      <li class="testHabit" onclick="addActiveId()" value="<%= habit.habitName %>"><%= habit.habitName %></li>
+                      <li class="testHabit" onclick="addActiveId()" value="<%= habit.habitName %>">
+                        <%= habit.habitName %>
+                        <div class="buttonContainerEditDeleteHabit">
+                          <form action="#" method="put">
+                            <button type="submit"><i class="far fa-edit"></i></button>                      
+                          </form>
+                          <form action="#" method="delete">
+                            <button type="submit"><i class="fas fa-times"></i></button>                      
+                          </form>    
+                        </div>
+                        </li>
                       </div> 
                  <% } %>
             <% }); %>

@@ -415,6 +415,29 @@ body#dashboard li:hover {
   color: #ffffff;
 }
 
+#dashboard .buttonContainerEditDeleteHabit {
+  width: 65px;
+  float: right;
+  margin-right: 0;
+  position: relative;
+  right: 0;
+  top: -9px;
+}
+
+#dashboard form button {
+  padding: 5px;
+  margin-left: 5px;
+  color: black;
+  float: left;
+  background: none;
+  cursor: pointer;
+  transition: all ease 0.5s;
+}
+
+#dashboard li.categoryBad:hover button, #dashboard li:hover button{
+  color: white !important;
+}
+
 /*Modal for create new habit*/
   /* The Modal (background) */
   .modal {
