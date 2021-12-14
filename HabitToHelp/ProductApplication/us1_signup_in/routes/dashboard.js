@@ -40,4 +40,10 @@ router.post('/', (req, res) => {
 });    
 //after login find all with same userID in mongoose
 
+router.delete('/', (req, res) => { 
+
+    newHabit.save();     //save to DB
+    res.redirect('/dashboard'); //when post route succes redirect.
+});    
+
 module.exports = router;
