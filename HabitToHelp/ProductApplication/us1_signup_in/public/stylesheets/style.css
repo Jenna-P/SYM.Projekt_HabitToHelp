@@ -319,22 +319,24 @@ progress::-webkit-progress-value {
 }
 
 #dashboard .createHabit #habitForm {
-  margin: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  max-width: 96%;
 }
 
 /*Dashboard form style*/
 form#habitForm {
-  border: solid 1px lightgrey;
-  padding: 20px;
+  padding: 0px;
   margin-left: 0 !important;
+  margin-top: 0;
 }
 #dashboard .categoryContainer,
 #dashboard .frequencyContainer {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .categoryContainer {
-  margin-top: 30px;
+  margin-top: 15px;
 }
 
 #dashboard label {
@@ -342,6 +344,7 @@ form#habitForm {
   padding-top: 5px;
   padding-bottom: 5px;
   font-weight: 900;
+  font-size: 14px;
 }
 #dashboard select#category,
 #dashboard select#frequency {
@@ -351,21 +354,24 @@ form#habitForm {
 input#habitName {
   margin-top: 5px;
   margin-bottom: 5px;
-  max-width: 300px;
 }
 
-body#dashboard #textDescription {
+body#dashboard #habitDescription {
   display: block;
   margin-top: 10px;
   padding: 10px;
   font-family: Arial, Helvetica, sans-serif;
-  max-width: 290px;
+  width: 100%;
+  padding-right: 0;
 }
 
 input#date {
   max-width: 200px;
 }
 
+input#startDate {
+  max-width: 130px;
+}
 .habitListBox {
   max-width: 400px;
 }
@@ -426,10 +432,11 @@ body#dashboard li:hover {
   /* Modal Content/Box */
   .modal-content {
     background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
+    margin: 5% auto; /* 15% from the top and centered */
     padding: 20px;
+    padding-bottom: 50px;
     border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+    width: 40%; /* Could be more or less, depending on screen size */
   }
 
   /* The Close Button */
@@ -451,3 +458,21 @@ body#dashboard li:hover {
     float: right;
     cursor: pointer;
   }
+
+  .createHabit h2 {
+    margin-top: 0;
+    font-size: 20px;
+  }
+
+  .addButtonContainer {
+    float: left;
+    display: block;
+    margin-bottom: 20px !important;
+    background: red;
+    width: 100%;
+  }
+      #addNewHabitButton{
+        float: right;
+        position: relative !important;
+        left: 10px;  
+      }
