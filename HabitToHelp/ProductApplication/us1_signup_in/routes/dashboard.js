@@ -40,6 +40,7 @@ const newHabit = new Habit({
 });
 //save to DB
 newHabit.save();
+res.redirect('/dashboard');
 });
     
 //after login find all with same userID in mongoose
