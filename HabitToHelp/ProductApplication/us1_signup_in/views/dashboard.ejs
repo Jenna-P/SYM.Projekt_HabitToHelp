@@ -7,6 +7,7 @@
     <title>HabitToHelp</title>
     <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
     <!--Google font added-->
+    <script defer src="/javascript/customStyleFunctions.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">        
@@ -35,11 +36,11 @@
             <% habits.forEach(function(habit){ %>
               <% if(habit.category ==='bad'){ %>
                 <div class="habitListBox">
-                  <li class="categoryBad"><%= habit.habitName %></li>
+                  <li class=" testHabit categoryBad" onclick="addActiveId()"><%= habit.habitName %></li>
                   </div>
                   <% } else{ %>  
                     <div class="habitListBox">
-                      <li><%= habit.habitName %></li>
+                      <li class="testHabit" onclick="addActiveId()" value="<%= habit.habitName %>"><%= habit.habitName %></li>
                       </div> 
                  <% } %>
             <% }); %>
@@ -77,8 +78,6 @@
             <button type="submit">ADD</button>
         </form>
     </div>
-   
-
     </div>
   </div>   
 </div>      
