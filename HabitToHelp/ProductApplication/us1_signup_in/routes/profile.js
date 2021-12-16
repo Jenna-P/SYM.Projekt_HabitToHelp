@@ -9,7 +9,7 @@ let user_signedin = null;
 const User = require('../models/User');
 
 //GET routes
-router.  get('/', async (req, res) => { 
+router.get('/', async (req, res) => { 
     //find user and match id and get information
     user_signedin = await User.find({userID : req.user._id});
     //req.user til at vise data fra DB

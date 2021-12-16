@@ -15,21 +15,8 @@
     <script defer src="https://kit.fontawesome.com/bec4865bac.js" crossorigin="anonymous"></script>
   </head>
 <body id="dashboard">
-  <div class='wrapper'>    
-    <div class="menu">
-      <a href="/" class="logo">HabitToHelp</a>
-      <div class="rightTopMenu">
-        <div class="dashboardMenu Left">   
-              <%- include("globalElements/header") %>     
-        </div>     
-        <div class="dashboardMenu Right">
-            <a id="profileInformations" href="#">
-                <img src="/images/profileImg.png" alt="profileImg" />
-            </a>
-        </div>  
-        <a href="/signOut" id="signOut">Sign out</a>      
-      </div>
-    </div>
+  <div class='wrapper'>
+    <%- include("globalElements/header") %>
     <div class="container">    
       <button id="createHabitButton">+ Add new habit</button> <!--modal new habit button-->
       <h1>Dashboard</h1>
