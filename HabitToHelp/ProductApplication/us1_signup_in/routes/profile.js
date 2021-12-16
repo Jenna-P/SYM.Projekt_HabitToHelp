@@ -13,7 +13,7 @@ router.  get('/', async (req, res) => {
     //find user and match id and get information
     user_signedin = await User.find({userID : req.user._id});
     //req.user til at vise data fra DB
-    res.render('profilePage', {
+    res.render('profile', {
         username: req.user.username,
         name: req.user.name,
     });
