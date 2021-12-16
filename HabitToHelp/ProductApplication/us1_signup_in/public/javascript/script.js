@@ -27,3 +27,26 @@
       modal.style.display = "none";
     }
   }
+
+  //send target habit value with GET method
+  const items = document.querySelectorAll('li, form.iconButton');
+items.forEach(item => {
+	item.addEventListener('click',(e)=>{  
+    let targetHabit = e.target.innerText;
+		console.log(targetHabit);
+    fetch('/dashboard/'+ targetHabit , { method:'GET', data: {habitName: targetHabit}})
+  .then(function (response) {
+    if (response.ok) {
+      console.log('clicked target habit')
+      return
+    }
+    throw new Error('Request failed.')
+  })
+  .catch(function (error) {
+    console.log(error)
+ })
+   
+    
+	}
+	)
+})
