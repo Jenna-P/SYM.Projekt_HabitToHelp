@@ -5,18 +5,34 @@
 <img src="/HabitToHelp/TimeEstimation/cycleTable.png" alt="cycleTable" width="500px">
 <br>
 
+
+## Kodevejledning:
+
+###### Sådan kører du applikationen:
+
+  1. Åben terminalen i fx visual studio code.
+  2. cd HabitToHelp/ProductApplication/us1_signup_in
+  3. npm run dev
+  4. Besøg localhost:3000 i din webbrowser.
+ 
+<br><br><br>
+
 ## Relevante links til docs:
 
-### Rapporten: 
+###### Rapporten: 
 https://docs.google.com/document/d/1p9olCC6NCL5qUJ4v-Tonw5L4ybBPVBYwgYIupktW9ww/edit#
 
-### Som MakeItUp:
+<br>
+
+###### Som MakeItUp:
 Problemformulering + user stories + priritering heraf: 
 https://docs.google.com/document/d/1z1UCRyyNIrjHCNlwEUwWW4duy3JjzLxLauuoffWxWf0/edit#
 
 Tidsestimering: Se folder "MakeItUp" -> "TimeEstimation" for planning_poker_table.xlsm. 
 
-### Udviklingsteam - HabitToHelp:
+<br>
+
+###### Udviklingsteam - HabitToHelp:
 Problemformulering + user stories + priritering heraf: 
 https://docs.google.com/document/d/1j3JPrG-ru-f0qzb9x7F8JGFQqCFVFT8IDJpS-qZB40o/edit#
 
