@@ -12,13 +12,9 @@ const User = require('../models/User');
 router.  get('/', async (req, res) => { 
     //find user and match id and get information
     user_signedin = await User.find({userID : req.user._id});
-    //req.user til at vise username
+    //req.user til at vise data fra DB
     res.render('profilePage', {
         username: req.user.username,
+        name: req.user.name,
     });
 });
-
-
-function getProfileImage() {
-
-}
