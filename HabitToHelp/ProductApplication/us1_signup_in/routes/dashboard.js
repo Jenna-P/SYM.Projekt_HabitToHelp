@@ -14,7 +14,7 @@ const Habit = require('../models/Habit');
 router.get('/', async (req, res) => { 
     //find user and match id and get habits from DB
     let habit_list = await Habit.find({userID : req.user._id});
-    console.log(habit_list);
+    //console.log(habit_list);
     //req.user til at vise username
     res.render('dashboard', {
         habits: habit_list,
@@ -22,6 +22,18 @@ router.get('/', async (req, res) => {
         name: req.user.name,
     });
 });
+
+//get value by endepoint 
+router.get('/:habitName',  async (req, res) => { 
+    //const {habitName, habitDescription, category, frequency, startDate} = req.body;
+    let targetHabit = await Habit.find({habitName: req.params.habitName});
+    console.log("get habitName :" + req.params.habitName );
+    console.log(targetHabit);
+   
+    res.redirect('/dashboard');
+   // res.render('dashboard');
+    
+});    
 
 router.post('/', (req, res) => { 
     const {habitName, habitDescription, category, frequency, startDate} = req.body;

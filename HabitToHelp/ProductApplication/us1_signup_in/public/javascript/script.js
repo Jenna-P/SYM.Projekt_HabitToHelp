@@ -37,7 +37,7 @@ items.forEach(item => {
     fetch('/dashboard/'+ targetHabit , { method:'GET', data: {habitName: targetHabit}})
   .then(function (response) {
     if (response.ok) {
-      console.log('clicked target habit')
+      console.log('clicked target habit and send value')
       return
     }
     throw new Error('Request failed.')

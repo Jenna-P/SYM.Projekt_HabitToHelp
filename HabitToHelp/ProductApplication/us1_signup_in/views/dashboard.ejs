@@ -28,7 +28,7 @@
             <% habits.forEach(function(habit){ %>
               <% if(habit.category ==='bad'){ %>
                 <div class="habitListBox">
-                  <li class="testHabit categoryBad" id="demo" onclick="" value="<%= habit.habitName %>">
+                  <li class="testHabit categoryBad"  value="<%= habit.habitName %>">
                     <%= habit.habitName %>
                     <div class="buttonContainerEditDeleteHabit">
                       <form action="#" method="put">
@@ -42,7 +42,7 @@
                   </div>
                   <% } else{ %>  
                     <div class="habitListBox">
-                      <li class="testHabit" id="demo" onclick="" value="<%= habit.habitName %>">
+                      <li class="testHabit"  value="<%= habit.habitName %>">
                         <%= habit.habitName %>
                         <div class="buttonContainerEditDeleteHabit">
                           <form action="#" method="put">
