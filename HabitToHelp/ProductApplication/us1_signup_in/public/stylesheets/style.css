@@ -511,3 +511,63 @@ body#dashboard li:hover {
   .customHello {
     font-size: 20px;
   }
+
+/*Profile view*/
+#profile .container {
+  background: #ffffff;
+  padding: 20px;
+}
+#profile .wrapper {
+  margin-bottom: 100px;
+}
+  #profile h1 {
+    margin: 0;
+  }
+  #profile .profileInformationTable{
+    float: left;
+    width: 430px;
+    background-color: #eaeaea;
+    padding: 20px;
+    margin-left: 31%;
+  }
+    .profileInformationTable tr td{
+      padding: 5px;
+    }
+    .profileInformationTable tr td:first-child{
+      font-weight: 900;
+    }
+    .profileInformationTable tr td:last-child{
+      text-align: right;
+    }
+    .profileImgContainer input[type="submit"]{
+      cursor: pointer;
+      transition: all 0.3s ease;
+      background: #ffffff;
+      color: #000000;
+    }
+      .profileImgContainer input[type="submit"]:hover{
+        background: #000000;
+        color: #ffffff;
+        transition: all 0.3s ease;
+      }
+
+  #profile .profileImgContainer{
+    float: left;
+    width: 240px;
+    text-align: left;
+  }
+    #profilePicture{
+      width: 240px;
+      float: right;
+    }
+    .profileImgContainer form {
+      width: 240px;
+      display: inline-block;
+      margin-top: 20px;
+    }
+    .profileImgContainer form input#img {
+        border: none;
+    }
+    .profileImgContainer form label:first-child {
+      padding-left: 10px;
+    }

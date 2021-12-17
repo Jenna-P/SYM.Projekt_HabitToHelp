@@ -1,22 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>HabitToHelp</title>
-        <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
-        <!--Google font added-->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">        
-    </head>
-<body id="profilePage">
-    <div class="wrapper">  
-        <%- include("globalElements/header") %>     
-        <div class="container">
-            <img src="/images/profileImg.png" alt="profileImg" />
-        </div> 
-    </div>
-</body>
-</html>l
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HabitToHelp</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+    <!--Google font added-->
+    <script defer src="/javascript/script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">        
+</head>
+    <body id="profile">
+        <div class="wrapper">
+            <%- include("globalElements/header") %>
+            <div class="container">    
+                <h1>Profile</h1>
+                <p>Welcome back to your profile, <%= name %></p>
+                <div class="profileImgContainer">
+                    <img id="profilePicture" src="/images/profileImg.png" alt="profileImg"/>
+                    <form action="/action_page.php">
+                        <label for="img">Select a new image:</label>
+                        <input type="file" id="img" name="img" accept="image/*">
+                        <input type="submit" value="Upload img"/>
+                    </form>
+                </div>
+                <table class="profileInformationTable">
+                    <tr>
+                        <td>Username:</td>
+                        <td><%= username %></td>
+                    </tr>
+                    <tr>
+                        <td>Name:</td>
+                        <td><%= name %></td>
+                    </tr>
+                    <tr>
+                        <td>Email:</td>
+                        <td><%= email %></td>
+                    </tr>
+                    <tr>
+                        <td>Completed habits:</td>
+                        <td>....</td>
+                    </tr>
+                    <tr>
+                        <td>Current level:</td>
+                        <td>....</td>
+                    </tr>
+                    <tr>
+                        <td>Current rank:</td>
+                        <td>....</td>
+                    </tr>
+                </table>                
+            </div>   
+        </div>      
+        <%- include("globalElements/footer") %>
+    </body>
+</html>
