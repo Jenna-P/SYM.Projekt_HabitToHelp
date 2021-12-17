@@ -12,17 +12,23 @@ router.get('/', async (req, res) => {
     res.render('dashboard', {
         habits: habit_list,
         username: req.user.username,
-        name: req.user.name,
+        name: req.user.name
     });
 });
 
 //get value by endepoint 
 router.get('/:habitName',  async (req, res) => { 
     //const {habitName, habitDescription, category, frequency, startDate} = req.body;
+    let habit_list = await Habit.find({userID : req.user._id});
     let targetHabit = await Habit.find({habitName: req.params.habitName});
     console.log("get habitName :" + req.params.habitName );
     console.log(targetHabit);   
-    res.redirect('/dashboard');
+    res.render('dashboard', {
+        habits: habit_list,
+        username: req.user.username,
+        name: req.user.name,
+        targetHabit: targetHabit
+    });
 });    
 
 router.post('/', (req, res) => { 

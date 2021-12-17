@@ -33,8 +33,9 @@
 items.forEach(item => {
 	item.addEventListener('click',(e)=>{  
     let targetHabit = e.target.innerText;
+    //let targetobjId = e
 		console.log(targetHabit);
-    fetch('/dashboard/'+ targetHabit , { method:'GET', data: {habitName: targetHabit}})
+    fetch('/dashboard/'+targetHabit , { method:'GET', data: {habitName: targetHabit}})
   .then(function (response) {
     if (response.ok) {
       console.log('clicked target habit and send value')

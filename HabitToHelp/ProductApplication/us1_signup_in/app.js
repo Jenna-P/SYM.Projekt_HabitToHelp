@@ -80,9 +80,12 @@ app.use(function(req, res, next) {
 
 app.use('/', indexRouter);
 app.use('/dashboard', dashboardRouter);
+app.use('/dashboard/:habitName', dashboardRouter);
 app.use('/signup', signUpRouter);
 app.use('/signupSuccess', signUpSuccessRouter);
 app.use('/profile', profileRouter);
+
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
