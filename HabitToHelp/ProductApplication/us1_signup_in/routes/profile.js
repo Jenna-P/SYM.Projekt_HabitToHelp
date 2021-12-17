@@ -1,20 +1,15 @@
-const { Router } = require('express');
 const express = require('express');
 const router = express.Router();
-
-
-let user_signedin = null;
-
 //Refrence MongoDB schema from models folder
-const User = require('../models/User');
+//const User = require('../models/User');
 
-//GET routes
+//GET routes profile page
 router.get('/', async (req, res) => { 
-    //find user and match id and get information
-    user_signedin = await User.find({userID : req.user._id});
-    //req.user til at vise data fra DB
     res.render('profile', {
         username: req.user.username,
         name: req.user.name,
+        email: req.user.email,
     });
 });
+
+module.exports = router;
