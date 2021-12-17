@@ -1,13 +1,6 @@
 const express = require('express');
 const router = express.Router();
-//const port = 3000;
 const testObjects = require('../testObjekter');
-/*
-2. list div box  ?
-3. google : EJS change div box style to red if category value is bad
-
-*/
-
 const Habit = require('../models/Habit');
 
 //GET routes dashboard page
@@ -28,11 +21,8 @@ router.get('/:habitName',  async (req, res) => {
     //const {habitName, habitDescription, category, frequency, startDate} = req.body;
     let targetHabit = await Habit.find({habitName: req.params.habitName});
     console.log("get habitName :" + req.params.habitName );
-    console.log(targetHabit);
-   
+    console.log(targetHabit);   
     res.redirect('/dashboard');
-   // res.render('dashboard');
-    
 });    
 
 router.post('/', (req, res) => { 
@@ -53,7 +43,6 @@ router.post('/', (req, res) => {
 //after login find all with same userID in mongoose
 
 router.delete('/', (req, res) => { 
-
     newHabit.save();     //save to DB
     res.redirect('/dashboard'); //when post route succes redirect.
 });    
