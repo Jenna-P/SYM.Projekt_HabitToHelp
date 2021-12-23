@@ -63,6 +63,8 @@
   // When the user clicks on the button, open the modal
   btnEdit.onclick = function() {
     modalEdit.style.display = "block";
+    let clickedHabit = btnEdit.getAttribute('data-value');
+    document.getElementById("habitNameEdit").value = clickedHabit;
   }
 
   // When the user clicks on <span> (x), close the modal
@@ -79,3 +81,5 @@
 
   /* For edit habit modal information from chosen habit */
   
+ 
+ 
