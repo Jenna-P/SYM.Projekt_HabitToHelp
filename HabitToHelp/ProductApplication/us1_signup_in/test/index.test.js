@@ -4,7 +4,7 @@ const app = require('../app');
 /*TESTCASE 1:*/
 // get /(index)  (test to working jest)
 describe('GET /', () => {
-    it('should responde to index', (done) => {
+    it('should respond to index', (done) => {
         request(app)
       .get('/')
       .send('index')
