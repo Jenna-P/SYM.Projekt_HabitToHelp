@@ -28,31 +28,24 @@
             <% habits.forEach(function(habit){ %>
               <% if(habit.category ==='bad'){ %>
                 <div class="habitListBox">
-                  <li class="testHabit categoryBad"  value="<%= habit.habitName %>">
-                    <%= habit.habitName %>
-                    
-                    <div class="buttonContainerEditDeleteHabit">
-                      <form action="#" method="put">
-                        <!--vis obj ID her som hidden input-->
-                        <button type="submit"><i class="far fa-edit"></i></button>                      
-                      </form>
-                      <form action="#" method="delete">
-                        <button type="submit"><i class="fas fa-times"></i></button>                      
-                      </form>    
-                    </div>
-                  </li>
-                  </div>
+                    <li class="testHabit categoryBad" value="<%= habit.habitName %>">
+                      <%= habit.habitName %>
+                      <div class="buttonContainerEditDeleteHabit">
+                          <button type="submit"><i class="far fa-thumbs-down"></i></i></button>                      
+                          <button class="editHabitButton" type="submit" data-value="<%= habit.habitName %>"><i class="far fa-edit"></i></button>                      
+                          <button type="submit"><i class="fas fa-times"></i></button>                      
+                        </form>    
+                      </div>
+                    </li>
+                </div>
                   <% } else{ %>  
                     <div class="habitListBox">
-                      <li class="testHabit"  value="<%= habit.habitName %>"> <!--data-objId = "<%= habit._id %>"-->
+                      <li class="testHabit" value="<%= habit.habitName %>"> <!--data-objId = "<%= habit._id %>"-->
                         <%= habit.habitName %>
                         <div class="buttonContainerEditDeleteHabit">
-                          <form action="#" method="put">
-                            <button type="submit"><i class="far fa-edit"></i></button>                      
-                          </form>
-                          <form action="#" method="delete">
-                            <button type="submit"><i class="fas fa-times"></i></button>                      
-                          </form>    
+                          <button type="submit"><i class="far fa-thumbs-up"></i></i></button>                      
+                          <button class="editHabitButton" type="submit" data-value="<%= habit.habitName %>"><i class="far fa-edit"></i></button>                      
+                          <button type="submit"><i class="fas fa-times"></i></button>                      
                         </div>
                         </li>
                       </div> 
@@ -98,6 +91,43 @@
         </div>
       </div><!--modal ends-->
 
+
+      <!--modal - edit habit-->
+      <div id="myModalEdit" class="modalEdit modal" style="display: none;">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="closeEdit close">&times;</span>
+          <div class="editHabit">
+            <h2>Edit habit </h2>
+            <form action="/dashboard" method="POST" id="habitForm">
+              <label for=habitName>Habit name:</label>
+              <input type="text" name="habitName" id="habitName" placeholder="E.g. Running">
+              <label for="habitDescription">Habit description:</label>
+              <textarea id="habitDescription" name="habitDescription" rows="4" cols="50" placeholder="E.g. Your goal or purpose for this habit."></textarea>
+              <div class="categoryContainer">
+                <label for=“category”>Choose a category:</label>
+                <select name="category" id="category" form="habitForm">
+                  <option value="good">Good</option>
+                  <option value="bad">Bad</option> 
+                </select> 
+              </div>
+              <div class="frequencyContainer">
+                  <label for=“frequency”>Choose a frequency:</label>
+                  <select name="frequency" id="frequency" form="habitForm">
+                    <option value="daily">Daily</option> 
+                    <option value="weekly">Weekly</option> 
+                    <option value="monthly">Monthly</option> 
+                  </select> 
+                </div>
+                <div class="dateContainer">
+                  <label for=“startDate”>Choose start date:</label>
+                <input type="date" id="startDate" name="startDate">
+                </div>
+                <button id="addNewHabitButton" type="submit">UPDATE</button>
+            </form>
+          </div>
+        </div>
+      </div><!--modalEdit ends-->
     </div>
   </div>   
 </div>      

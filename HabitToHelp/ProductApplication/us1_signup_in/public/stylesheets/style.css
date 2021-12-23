@@ -416,7 +416,7 @@ body#dashboard li:hover {
 }
 
 #dashboard .buttonContainerEditDeleteHabit {
-  width: 65px;
+  width: 110px;
   float: right;
   margin-right: 0;
   position: relative;
@@ -424,18 +424,23 @@ body#dashboard li:hover {
   top: -9px;
 }
 
-#dashboard .buttonContainerEditDeleteHabit form button {
+#dashboard .buttonContainerEditDeleteHabit button {
   padding: 5px;
   margin-left: 5px;
   color: black;
   float: left;
   background: none;
-  cursor: pointer;
+  cursor: pointer; 
   transition: all ease 0.5s;
 }
 
 #dashboard li.categoryBad:hover button, #dashboard li:hover button{
-  color: white !important;
+  color: white;
+  cursor: pointer; 
+}
+
+#dashboard .buttonContainerEditDeleteHabit:hover button:hover i{
+  font-size: 22px;
 }
 
 /*Modal for create new habit*/
@@ -571,3 +576,13 @@ body#dashboard li:hover {
     .profileImgContainer form label:first-child {
       padding-left: 10px;
     }
+
+/*MyModalEdit*/
+#myModalEdit .modal-content {
+  padding-right: 40px !important;
+  padding-bottom: 70px;
+}
+  #myModalEdit .close{
+    position: relative;
+    right: -20px;
+  }
