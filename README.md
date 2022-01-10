@@ -33,6 +33,9 @@ Tidsestimering: Se folder "MakeItUp" -> "TimeEstimation" for planning_poker_tabl
 <br>
 
 ###### Udviklingsteam - HabitToHelp:
+Gruppekontrakt:
+https://docs.google.com/document/d/1NSTGBoBpYbMPWcJN_Up-uGKzIdgRzigxiE8_qHmd7ks/edit#heading=h.5xm1uka33a23
+
 Problemformulering + user stories + priritering heraf: 
 https://docs.google.com/document/d/1j3JPrG-ru-f0qzb9x7F8JGFQqCFVFT8IDJpS-qZB40o/edit#
 
