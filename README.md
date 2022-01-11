@@ -49,4 +49,4 @@ https://docs.google.com/document/d/1NSTGBoBpYbMPWcJN_Up-uGKzIdgRzigxiE8_qHmd7ks/
 <b>Problemformulering + user stories + priritering heraf: </b>
 https://docs.google.com/document/d/1j3JPrG-ru-f0qzb9x7F8JGFQqCFVFT8IDJpS-qZB40o/edit#
 
-<b>Tidsestimering og prioriteter:</b> Se folder "HabitToHelp" for planning_poker_table.ods. .
+<b>Tidsestimering og prioriteter:</b> Se folder "HabitToHelp" for planning_poker_table.ods. 
