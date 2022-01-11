@@ -18,7 +18,7 @@ Her ses fordelingen af vores cyklus' gennem hele projektet. <br>
 ### Sådan kører du applikationen (Heroku):
 
 Du besøger blot følgende link, da vores løsning er deployet herigennem, vil den kører uden videre installation/igangsættelse:<br>
-<a href="#">HEROKU LINK HER</a>
+<a href="https://habittohelp.herokuapp.com">https://habittohelp.herokuapp.com</a>
 <br>
 
 ### Sådan kører du applikationen (Hentet fra Github):
