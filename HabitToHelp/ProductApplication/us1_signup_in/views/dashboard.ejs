@@ -103,17 +103,17 @@
               <label for=habitName>Habit name:</label>
               <input type="text" name="habitNameEdit" id="habitNameEdit" placeholder="E.g. Running">
               <label for="habitDescription">Habit description:</label>
-              <textarea id="habitDescription" name="habitDescription" rows="4" cols="50" placeholder="E.g. Your goal or purpose for this habit."></textarea>
+              <textarea id="habitDescriptionEdit" name="habitDescriptionEdit" rows="4" cols="50" placeholder="E.g. Your goal or purpose for this habit."></textarea>
               <div class="categoryContainer">
                 <label for=“category”>Choose a category:</label>
-                <select name="category" id="category" form="habitForm">
+                <select name="categoryEdit" id="categoryEdit" form="habitForm">
                   <option value="good">Good</option>
                   <option value="bad">Bad</option> 
                 </select> 
               </div>
               <div class="frequencyContainer">
                   <label for=“frequency”>Choose a frequency:</label>
-                  <select name="frequency" id="frequency" form="habitForm">
+                  <select name="frequencyEdit" id="frequencyEdit" form="habitForm">
                     <option value="daily">Daily</option> 
                     <option value="weekly">Weekly</option> 
                     <option value="monthly">Monthly</option> 
@@ -121,9 +121,9 @@
                 </div>
                 <div class="dateContainer">
                   <label for=“startDate”>Choose start date:</label>
-                <input type="date" id="startDate" name="startDate">
+                <input type="date" id="startDateEdit" name="startDateEdit">
                 </div>
-                <button id="addNewHabitButton" type="submit">UPDATE</button>
+                <button id="addEditHabitButton" type="submit">UPDATE</button>
             </form>
           </div>
         </div>
